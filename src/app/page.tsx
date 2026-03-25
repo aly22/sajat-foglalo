@@ -1,6 +1,6 @@
 import { Hero } from "@/components/hero";
 import { Features } from "@/components/features";
-import { RoiCalculator } from "@/components/roi-calculator";
+import { RoiCalculatorLazy as RoiCalculator } from "@/components/roi-calculator-lazy";
 import { Pricing } from "@/components/pricing";
 import { Faq } from "@/components/faq";
 import { ContactForm } from "@/components/contact-form";

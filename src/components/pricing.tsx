@@ -62,7 +62,7 @@ export function Pricing() {
           </div>
 
           <div className="border-t border-border bg-muted/50 px-8 py-4 text-center text-sm text-muted-foreground">
-            A rendszer a tiéd, nincs hűségidő.
+            Nincs hűségidő. Bármikor leállíthatod a szolgáltatást.
           </div>
         </div>
       </div>

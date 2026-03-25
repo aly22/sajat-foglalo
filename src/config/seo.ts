@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     q: "Milyen szalonoknak ajánlott?",
-    a: "Fodrász- és borbélyszalonoknak, szépségszalonoknak, kozmetikusoknak, személyi edzőknek. Bárkinek, aki időpontfoglalásra épülő szolgáltatást nyújt.",
+    a: "Bárkinek, aki időpontfoglalásra épülő szolgáltatást nyújt.",
   },
   {
     q: "Kapok saját domaint?",
@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: "Mi történik, ha le akarok állni a szolgáltatással?",
-    a: "Nincs hűségidő. A rendszer a tiéd, az adatok a tiéd. Bármikor dönthetsz úgy, hogy magad üzemelteted tovább.",
+    a: "Nincs hűségidő. Bármikor leállíthatod a szolgáltatást, mindössze egy havi díj extra fizetési kötelezettséged keletkezik.",
   },
   {
     q: "Hogyan csökkenti a no-show-kat?",

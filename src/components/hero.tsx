@@ -32,6 +32,8 @@ export function Hero() {
               width={1200}
               height={750}
               priority
+              fetchPriority="high"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
               className="rounded-xl border border-border shadow-2xl"
             />
           </div>

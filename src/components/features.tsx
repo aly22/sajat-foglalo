@@ -91,6 +91,7 @@ export function Features() {
                       alt={f.title}
                       width={35}
                       height={35}
+                      sizes="35px"
                       className="h-[35px] w-[35px] object-cover"
                     />
                   </div>
