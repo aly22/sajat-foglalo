@@ -60,7 +60,9 @@ export function RoiCalculator() {
       for (const months of [12, 24, 36, 48, 60, 72, 84, 96]) {
         const savings = monthlyFee * months - (SETUP_COST + MONTHLY_COST * months);
         if (savings > 0) {
-          milestones.push({ label: periodLabel(months), savings });
+          const years = months / 12;
+          const label = `a ${years}. évben`;
+          milestones.push({ label, savings });
         }
         if (milestones.length >= 2) break;
       }
@@ -140,7 +142,7 @@ export function RoiCalculator() {
                   <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
                   <XAxis
                     dataKey="month"
-                    tickFormatter={(v) => `${v}. hó`}
+                    tickFormatter={(v) => periodLabel(Number(v))}
                     tick={{ fontSize: 12 }}
                   />
                   <YAxis
@@ -152,7 +154,7 @@ export function RoiCalculator() {
                   />
                   <Tooltip
                     formatter={(value) => formatHuf(Number(value))}
-                    labelFormatter={(label) => `${label}. hónap`}
+                    labelFormatter={(label) => periodLabel(Number(label))}
                     position={{ y: 35 }}
                     contentStyle={{
                       fontSize: 11,
@@ -188,7 +190,7 @@ export function RoiCalculator() {
                       strokeDasharray="4 4"
                       strokeWidth={2}
                       label={{
-                        value: `Megtérülés: ${breakEvenMonth}. hó`,
+                        value: `Megtérülés: ${periodLabel(breakEvenMonth)}`,
                         position: "insideTopRight",
                         fontSize: 12,
                         fill: "#16a34a",
@@ -218,7 +220,7 @@ export function RoiCalculator() {
                   className="rounded-xl border border-border bg-muted p-5 text-center"
                 >
                   <p className="text-sm text-muted-foreground">
-                    Megtakarítás {m.label} után
+                    Megtakarítás {m.label}
                   </p>
                   <p
                     className="mt-1 font-heading text-2xl font-bold"

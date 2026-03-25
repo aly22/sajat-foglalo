@@ -13,7 +13,7 @@ export function Pricing() {
     <section id="arak" className="bg-muted px-6 py-20 sm:py-28">
       <div className="mx-auto max-w-2xl">
         <h2 className="font-heading text-center text-3xl font-bold sm:text-4xl">
-          Egyszerű, átlátható árazás
+          Átlátható árazás, rejtett díjak nélkül
         </h2>
         <p className="mt-4 text-center text-muted-foreground">
           Nincs rejtett díj. Nincs platformfüggés.

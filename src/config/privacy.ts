@@ -11,8 +11,8 @@ export const privacyConfig = {
   phoneRaw: "06307421723",
 
   // Website
-  siteUrl: "https://sajatfoglalo.hu",
-  privacyUrl: "https://sajatfoglalo.hu/adatkezelesi-tajekoztato",
+  siteUrl: "https://sajatfoglalo.vercel.app",
+  privacyUrl: "https://sajatfoglalo.vercel.app/adatkezelesi-tajekoztato",
 
   // Data processors
   processors: [

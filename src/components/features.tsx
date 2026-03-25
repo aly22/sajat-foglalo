@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import {
   CalendarCheck,
@@ -10,6 +10,7 @@ import {
   Globe,
   Link2,
 } from "lucide-react";
+import { Lightbox } from "./lightbox";
 
 const features = [
   {
@@ -17,11 +18,12 @@ const features = [
     title: "Online foglalás",
     description: "Vendégeid 0-24 foglalhatnak, te csak dolgozol.",
     screenshot: "/screenshots/01-booking-mobile.webp",
+    screenshotCaption: "Foglalj mobilról 30 másodperc alatt",
   },
   {
     icon: Mail,
     title: "Email értesítések",
-    description: "Automatikus megerősítés, emlékeztető, lemondás.",
+    description: "Foglalás megerősítés, emlékeztető, értékelés kérés, heti összefoglaló, stb.",
     screenshot: "/screenshots/02-email-confirmation.webp",
   },
   {
@@ -53,28 +55,13 @@ const features = [
 ];
 
 export function Features() {
-  const [lightbox, setLightbox] = useState<string | null>(null);
-
-  const closeLightbox = useCallback(() => setLightbox(null), []);
-
-  useEffect(() => {
-    if (lightbox === null) return;
-    document.body.style.overflow = "hidden";
-    const handleKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") closeLightbox();
-    };
-    window.addEventListener("keydown", handleKey);
-    return () => {
-      document.body.style.overflow = "";
-      window.removeEventListener("keydown", handleKey);
-    };
-  }, [lightbox, closeLightbox]);
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
 
   return (
     <section id="funkciok" className="bg-muted px-6 py-20 sm:py-28">
       <div className="mx-auto max-w-5xl">
         <h2 className="font-heading text-center text-3xl font-bold sm:text-4xl">
-          Minden, amire szükséged van
+          Minden funkció, amire egy szalonnak szüksége van
         </h2>
         <p className="mt-4 text-center text-muted-foreground">
           Egyetlen rendszer, ami lefedi a teljes foglalási folyamatot.
@@ -94,9 +81,10 @@ export function Features() {
                   <div
                     role="button"
                     tabIndex={0}
-                    onClick={() => setLightbox(f.screenshot)}
-                    onKeyDown={(e) => e.key === "Enter" && setLightbox(f.screenshot)}
-                    className="cursor-pointer overflow-hidden rounded-md border border-border p-1 shadow-sm transition hover:shadow-md" style={{ position: "relative", zIndex: 10 }}
+                    onClick={() => setLightbox({ src: f.screenshot, alt: f.screenshotCaption || f.title })}
+                    onKeyDown={(e) => e.key === "Enter" && setLightbox({ src: f.screenshot, alt: f.screenshotCaption || f.title })}
+                    className="cursor-pointer overflow-hidden rounded-md border border-border p-1 shadow-sm transition hover:shadow-md"
+                    style={{ position: "relative", zIndex: 10 }}
                   >
                     <Image
                       src={f.screenshot}
@@ -121,27 +109,11 @@ export function Features() {
       </div>
 
       {lightbox && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
-          onClick={closeLightbox}
-        >
-          <div className="relative max-h-[90vh] max-w-[90vw]" onClick={(e) => e.stopPropagation()}>
-            <Image
-              src={lightbox}
-              alt=""
-              width={1200}
-              height={800}
-              className="max-h-[85vh] w-auto rounded-lg object-contain"
-            />
-            <button
-              onClick={closeLightbox}
-              aria-label="Bezárás"
-              className="absolute -top-3 -right-3 flex h-8 w-8 items-center justify-center rounded-full bg-white text-black shadow-lg"
-            >
-              ✕
-            </button>
-          </div>
-        </div>
+        <Lightbox
+          src={lightbox.src}
+          alt={lightbox.alt}
+          onClose={() => setLightbox(null)}
+        />
       )}
     </section>
   );
