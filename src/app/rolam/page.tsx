@@ -27,8 +27,8 @@ export default function AboutPage() {
             <p>
               Aztán a barátom, Sterczer Tamás megkért, hogy készítsek egy
               foglalórendszert a szalonjának menedzseléséhez. Így született az
-              ötlet: egy rendszert készítek neked, ami a tiéd, nem egy harmadik
-              fél felülete, és nem vagy platformhoz kötve.
+              ötlet: egy rendszert készítek neked, ami a tiéd, és nem vagy
+              platformhoz kötve.
             </p>
           </div>
 
@@ -37,7 +37,7 @@ export default function AboutPage() {
               href="/#kapcsolat"
               className="inline-block rounded-lg bg-accent px-8 py-3.5 text-base font-semibold text-accent-foreground shadow-sm transition hover:bg-accent/90"
             >
-              Ajánlatot kérek
+              Érdekel
             </a>
           </div>
         </div>

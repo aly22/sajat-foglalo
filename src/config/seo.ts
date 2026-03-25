@@ -1,11 +1,11 @@
 const faqs = [
   {
-    q: "Miben más a IdőpontFoglalóm, mint a Salonic, BWNET vagy Fresha?",
-    a: "A IdőpontFoglalóm nem egy harmadik fél felülete. A rendszer a tiéd, a saját domaineden fut, és nem vagy platformhoz kötve. Egyszeri beüzemelés + fix havi díj, nem pedig havi előfizetés ami évről évre nő.",
+    q: "Miben más az általad készített honlap, mint a Salonic, BWNET vagy Fresha?",
+    a: "A rendszer a saját domaineden fut, nem vagy platformhoz kötve. Egyszeri beüzemelés + fix havi díj, nem pedig havi előfizetés ami évről évre nő.",
   },
   {
-    q: "Mennyibe kerül az időpontfoglaló rendszer?",
-    a: "Egyszeri beüzemelési díj 200 000 Ft, utána fix havi 4 000 Ft a szerver, domain és email költségekre. Nincs rejtett díj, nincs platformfüggés.",
+    q: "Mit jelent az, hogy 'a tiéd'?",
+    a: "Emailben elküldöd, hogyan képzeled el a honlapodat: a szalonod nevét, helyszínét, szolgáltatásaidat, stb. Én megépítem, a saját domainedre teszem, és kész. Nem egy közös platformon leszel száz másik szalonnal, hanem a saját oldaladon.",
   },
   {
     q: "Milyen szalonoknak ajánlott?",

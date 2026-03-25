@@ -15,7 +15,7 @@ export function Header() {
             href="/#kapcsolat"
             className="rounded-lg bg-accent px-4 py-2 font-semibold text-accent-foreground transition hover:bg-accent/90"
           >
-            Ajánlatot kérek
+            Érdekel
           </Link>
         </nav>
       </div>

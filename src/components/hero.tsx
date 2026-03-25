@@ -41,7 +41,7 @@ export function Hero() {
               href="#kapcsolat"
               className="rounded-lg bg-accent px-8 py-3.5 text-base font-semibold text-accent-foreground shadow-lg transition hover:bg-accent/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
-              Ajánlatot kérek
+              Érdekel
             </a>
           </div>
         </div>
@@ -50,7 +50,7 @@ export function Hero() {
             href="#kapcsolat"
             className="rounded-lg bg-accent px-8 py-3.5 text-base font-semibold text-accent-foreground shadow-lg transition hover:bg-accent/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
-            Ajánlatot kérek
+            Érdekel
           </a>
         </div>
       </div>
