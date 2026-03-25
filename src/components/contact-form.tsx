@@ -75,6 +75,24 @@ export function ContactForm() {
                 {status === "loading" ? "Küldés..." : "Érdekel!"}
               </button>
             </div>
+            <label className="flex items-start gap-2 text-left text-sm text-muted-foreground">
+              <input
+                type="checkbox"
+                required
+                className="mt-1 h-4 w-4 shrink-0 rounded border-border accent-accent"
+              />
+              <span>
+                Elfogadom az{" "}
+                <a
+                  href="/adatkezelesi-tajekoztato"
+                  target="_blank"
+                  className="text-accent underline"
+                >
+                  adatkezelési tájékoztatót
+                </a>
+                .
+              </span>
+            </label>
             {status === "error" && (
               <p className="mt-3 text-sm text-destructive">
                 Hiba történt, próbáld újra.
