@@ -31,12 +31,12 @@ export async function POST(req: Request) {
       from: process.env.SMTP_FROM,
       to: process.env.SMTP_USER,
       subject: `Új érdeklődés: ${name}`,
-      text: `Új érdeklődés érkezett a sajatfoglalo.vercel.app oldalról.\n\nNév: ${name}\nEmail: ${email}`,
+      text: `Új érdeklődés érkezett a idopontfoglalom.vercel.app oldalról.\n\nNév: ${name}\nEmail: ${email}`,
       html: `
         <h2>Új érdeklődés</h2>
         <p><strong>Név:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p>A sajatfoglalo.vercel.app oldalról érkezett.</p>
+        <p>A idopontfoglalom.vercel.app oldalról érkezett.</p>
       `,
     });
 

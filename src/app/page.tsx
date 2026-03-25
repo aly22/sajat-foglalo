@@ -38,7 +38,7 @@ export default function Home() {
         saját foglalórendszer, foglalórendszer szalonoknak, Salonic alternatíva,
         Booked4us alternatíva, BWNET alternatíva, Reservio alternatíva, Fresha
         alternatíva, ingyenes időpontfoglaló, automatikus emlékeztetők, no-show
-        csökkentés, naptár szinkronizáció, szalon CRM, SajátFoglaló.
+        csökkentés, naptár szinkronizáció, szalon CRM, IdőpontFoglalóm.
       </p>
     </>
   );

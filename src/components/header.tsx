@@ -5,7 +5,7 @@ export function Header() {
     <header className="border-b border-border px-6 py-4">
       <div className="mx-auto flex max-w-5xl items-center justify-between">
         <Link href="/" className="font-heading text-lg font-bold">
-          SajátFoglaló
+          IdőpontFoglalóm
         </Link>
         <nav className="flex items-center gap-6 text-sm">
           <Link href="/rolam" className="text-muted-foreground transition hover:text-foreground">

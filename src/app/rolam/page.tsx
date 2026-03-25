@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Rólam | SajátFoglaló",
-  description: "Dahud Ali, a SajátFoglaló fejlesztője.",
+  title: "Rólam | IdőpontFoglalóm",
+  description: "Dahud Ali, a IdőpontFoglalóm fejlesztője.",
 };
 
 export default function AboutPage() {

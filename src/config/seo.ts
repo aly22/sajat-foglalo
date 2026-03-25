@@ -1,7 +1,7 @@
 const faqs = [
   {
-    q: "Miben más a SajátFoglaló, mint a Salonic, BWNET vagy Fresha?",
-    a: "A SajátFoglaló nem egy harmadik fél felülete. A rendszer a tiéd, a saját domaineden fut, és nem vagy platformhoz kötve. Egyszeri beüzemelés + fix havi díj, nem pedig havi előfizetés ami évről évre nő.",
+    q: "Miben más a IdőpontFoglalóm, mint a Salonic, BWNET vagy Fresha?",
+    a: "A IdőpontFoglalóm nem egy harmadik fél felülete. A rendszer a tiéd, a saját domaineden fut, és nem vagy platformhoz kötve. Egyszeri beüzemelés + fix havi díj, nem pedig havi előfizetés ami évről évre nő.",
   },
   {
     q: "Mennyibe kerül az időpontfoglaló rendszer?",
@@ -41,12 +41,12 @@ export const faqJsonLd = {
 export const softwareJsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "SajátFoglaló",
+  name: "IdőpontFoglalóm",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   description:
     "Online időpontfoglaló rendszer fodrász- és borbélyszalonok számára. Egyszeri beüzemelés, fix havi díj, teljes kontroll.",
-  url: "https://sajatfoglalo.vercel.app",
+  url: "https://idopontfoglalom.vercel.app",
   offers: {
     "@type": "Offer",
     price: "200000",
@@ -56,17 +56,17 @@ export const softwareJsonLd = {
   author: {
     "@type": "Person",
     name: "Dahud Ali",
-    url: "https://sajatfoglalo.vercel.app/rolam",
+    url: "https://idopontfoglalom.vercel.app/rolam",
   },
 };
 
 export const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "SajátFoglaló",
+  name: "IdőpontFoglalóm",
   description:
     "Online időpontfoglaló rendszer szalonoknak. Saját domain, saját rendszer, fix havi díj.",
-  url: "https://sajatfoglalo.vercel.app",
+  url: "https://idopontfoglalom.vercel.app",
   email: "alidahud@gmail.com",
   telephone: "+36307421723",
   address: {

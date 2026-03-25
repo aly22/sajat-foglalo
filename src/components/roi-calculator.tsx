@@ -51,7 +51,7 @@ export function RoiCalculator() {
         points.push({
           month: m,
           "Jelenlegi rendszer": monthlyFee * m,
-          SajátFoglaló: SETUP_COST + MONTHLY_COST * m,
+          IdőpontFoglalóm: SETUP_COST + MONTHLY_COST * m,
         });
       }
 
@@ -177,7 +177,7 @@ export function RoiCalculator() {
                   />
                   <Area
                     type="monotone"
-                    dataKey="SajátFoglaló"
+                    dataKey="IdőpontFoglalóm"
                     stroke="#2563eb"
                     fill="#2563eb"
                     fillOpacity={0.1}

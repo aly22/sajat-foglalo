@@ -4,8 +4,8 @@ import { useState } from "react";
 
 const faqs = [
   {
-    q: "Miben más a SajátFoglaló, mint a Salonic, BWNET vagy Fresha?",
-    a: "A SajátFoglaló nem egy harmadik fél felülete. A rendszer a tiéd, a saját domaineden fut, és nem vagy platformhoz kötve. Egyszeri beüzemelés + fix havi díj, nem pedig havi előfizetés ami évről évre nő.",
+    q: "Miben más a IdőpontFoglalóm, mint a Salonic, BWNET vagy Fresha?",
+    a: "A IdőpontFoglalóm nem egy harmadik fél felülete. A rendszer a tiéd, a saját domaineden fut, és nem vagy platformhoz kötve. Egyszeri beüzemelés + fix havi díj, nem pedig havi előfizetés ami évről évre nő.",
   },
   {
     q: "Mennyibe kerül az időpontfoglaló rendszer?",

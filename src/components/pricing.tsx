@@ -16,7 +16,7 @@ export function Pricing() {
           Átlátható árazás, rejtett díjak nélkül
         </h2>
         <p className="mt-4 text-center text-muted-foreground">
-          Nincs rejtett díj. Nincs platformfüggés.
+          Nincs platformfüggés.
         </p>
 
         <div className="mt-12 overflow-hidden rounded-2xl border border-border bg-background shadow-lg">

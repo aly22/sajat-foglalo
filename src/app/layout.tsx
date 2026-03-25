@@ -15,10 +15,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sajatfoglalo.vercel.app"),
+  metadataBase: new URL("https://idopontfoglalom.vercel.app"),
   title: {
-    default: "SajátFoglaló | Online időpontfoglaló rendszer szalonoknak",
-    template: "%s | SajátFoglaló",
+    default: "IdőpontFoglalóm | Online időpontfoglaló rendszer szalonoknak",
+    template: "%s | IdőpontFoglalóm",
   },
   description:
     "Online időpontfoglaló rendszer fodrász- és borbélyszalonok számára. A tiéd. Egyszeri beüzemelés, fix havi díj, teljes kontroll.",
@@ -36,24 +36,24 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "SajátFoglaló | Online időpontfoglaló rendszer szalonoknak",
+    title: "IdőpontFoglalóm | Online időpontfoglaló rendszer szalonoknak",
     description:
       "A saját online időpontfoglalód. Egyszeri beüzemelés, fix havi díj, teljes kontroll.",
-    url: "https://sajatfoglalo.vercel.app",
-    siteName: "SajátFoglaló",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "SajátFoglaló" }],
+    url: "https://idopontfoglalom.vercel.app",
+    siteName: "IdőpontFoglalóm",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "IdőpontFoglalóm" }],
     locale: "hu_HU",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SajátFoglaló | Online időpontfoglaló rendszer szalonoknak",
+    title: "IdőpontFoglalóm | Online időpontfoglaló rendszer szalonoknak",
     description:
       "A saját online időpontfoglalód. Egyszeri beüzemelés, fix havi díj, teljes kontroll.",
     images: ["/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://sajatfoglalo.vercel.app",
+    canonical: "https://idopontfoglalom.vercel.app",
   },
 };
 

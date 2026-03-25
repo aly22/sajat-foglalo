@@ -1,6 +1,6 @@
 export const privacyConfig = {
   // Company
-  companyName: "SajátFoglaló",
+  companyName: "IdőpontFoglalóm",
   companyFullName: "Dahud Ali egyéni vállalkozó",
   companyLegalName: "Dahud Ali ev.",
   companyAddress: "7100 Szekszárd, Rákóczi utca 67",
@@ -11,8 +11,8 @@ export const privacyConfig = {
   phoneRaw: "06307421723",
 
   // Website
-  siteUrl: "https://sajatfoglalo.vercel.app",
-  privacyUrl: "https://sajatfoglalo.vercel.app/adatkezelesi-tajekoztato",
+  siteUrl: "https://idopontfoglalom.vercel.app",
+  privacyUrl: "https://idopontfoglalom.vercel.app/adatkezelesi-tajekoztato",
 
   // Data processors
   processors: [

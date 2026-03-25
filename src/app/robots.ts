@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://sajatfoglalo.vercel.app/sitemap.xml",
+    sitemap: "https://idopontfoglalom.vercel.app/sitemap.xml",
   };
 }
