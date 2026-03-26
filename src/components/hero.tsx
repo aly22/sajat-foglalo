@@ -36,7 +36,7 @@ export function Hero() {
               className="rounded-xl border border-border shadow-2xl"
             />
           </div>
-          <div className="hidden sm:flex absolute inset-x-0 bottom-0 justify-center -translate-y-1/2" style={{ zIndex: 20 }}>
+          <div className="hidden md:flex absolute inset-x-0 bottom-0 justify-center -translate-y-1/2" style={{ zIndex: 20 }}>
             <a
               href="#kapcsolat"
               className="rounded-lg bg-accent px-8 py-3.5 text-base font-semibold text-accent-foreground shadow-lg transition hover:bg-accent/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
@@ -45,7 +45,7 @@ export function Hero() {
             </a>
           </div>
         </div>
-        <div className="mt-6 flex justify-center sm:hidden">
+        <div className="mt-6 flex justify-center md:hidden">
           <a
             href="#kapcsolat"
             className="rounded-lg bg-accent px-8 py-3.5 text-base font-semibold text-accent-foreground shadow-lg transition hover:bg-accent/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
