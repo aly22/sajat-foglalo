@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 const MOBILE_SCREENSHOTS = ["01-booking-mobile", "02-email-confirmation", "03-admin-mobile", "04-appointments"];
@@ -20,6 +20,8 @@ export function Lightbox({
   alt: string;
   onClose: () => void;
 }) {
+  const [loaded, setLoaded] = useState(false);
+
   const handleKey = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -45,6 +47,11 @@ export function Lightbox({
         className="relative max-h-[90vh] max-w-[90vw]"
         onClick={(e) => e.stopPropagation()}
       >
+        {!loaded && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="h-8 w-8 animate-spin rounded-full border-2 border-white/30 border-t-white" />
+          </div>
+        )}
         <TransformWrapper
           initialScale={1}
           minScale={1}
@@ -58,7 +65,8 @@ export function Lightbox({
               src={src}
               alt={alt}
               {...getImageDimensions(src)}
-              className="max-h-[85vh] w-auto rounded-lg object-contain"
+              onLoad={() => setLoaded(true)}
+              className={`max-h-[85vh] w-auto rounded-lg object-contain transition-opacity duration-300 ${loaded ? "opacity-100" : "opacity-0"}`}
             />
           </TransformComponent>
         </TransformWrapper>
