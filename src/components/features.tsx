@@ -63,7 +63,7 @@ export function Features() {
           Minden funkció, amire egy szalonnak szüksége van
         </h2>
         <p className="mt-4 text-center text-muted-foreground">
-          Egyetlen időpontfoglaló rendszer, ami lefedi a teljes foglalási folyamatot.
+          Egyetlen rendszer, ami lefedi a teljes foglalási folyamatot.
         </p>
 
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

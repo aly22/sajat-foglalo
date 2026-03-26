@@ -34,11 +34,11 @@ export function ContactForm() {
     <section id="kapcsolat" className="px-6 py-20 sm:py-28">
       <div className="mx-auto max-w-md text-center">
         <h2 className="font-heading text-3xl font-bold sm:text-4xl">
-          Érdekel?
+          Beszéljünk!
         </h2>
         <p className="mt-4 text-muted-foreground">
           Add meg az email címed és 24 órán belül felveszem Veled a
-          kapcsolatot a saját időpontfoglaló rendszereddel kapcsolatban.
+          kapcsolatot.
         </p>
 
         {status === "success" ? (
