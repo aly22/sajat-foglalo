@@ -2,10 +2,12 @@ import Link from "next/link";
 
 export function Header() {
   return (
-    <header className="border-b border-border px-6 py-4">
+    <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md px-6 py-4">
       <div className="mx-auto flex max-w-5xl items-center justify-between">
-        <Link href="/" className="font-heading text-lg font-bold">
-          IdőpontFoglalóm
+        <Link href="/" className="flex items-center">
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-xs font-extrabold text-white">
+            IF
+          </span>
         </Link>
         <nav className="flex items-center gap-6 text-sm">
           <Link href="/rolam" className="text-muted-foreground transition hover:text-foreground">

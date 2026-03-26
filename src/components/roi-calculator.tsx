@@ -61,8 +61,7 @@ export function RoiCalculator() {
         const savings = monthlyFee * months - (SETUP_COST + MONTHLY_COST * months);
         if (savings > 0) {
           const years = months / 12;
-          const label = `a ${years}. évben`;
-          milestones.push({ label, savings });
+          milestones.push({ label: `a ${years}. évben`, savings });
         }
         if (milestones.length >= 2) break;
       }
@@ -89,10 +88,10 @@ export function RoiCalculator() {
     <section id="kalkulator" className="px-6 py-20 sm:py-28">
       <div className="mx-auto max-w-4xl">
         <h2 className="font-heading text-center text-3xl font-bold sm:text-4xl">
-          Mennyit spórolhatsz?
+          Mennyit spórolhatsz egy saját időpontfoglalóval?
         </h2>
         <p className="mt-4 text-center text-muted-foreground">
-          Írd be, mennyit fizetsz havonta a jelenlegi rendszeredért.
+          Írd be, mennyit fizetsz havonta a jelenlegi időpontfoglaló rendszeredért.
         </p>
 
         <div className="mx-auto mt-8 max-w-sm">
@@ -134,7 +133,7 @@ export function RoiCalculator() {
         {monthlyFee > MONTHLY_COST && (
           <>
             <div className="mt-10 h-80 w-full sm:h-96">
-              <ResponsiveContainer width="100%" height="100%">
+              <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={0}>
                 <AreaChart
                   data={data}
                   margin={{ top: 10, right: 10, left: 10, bottom: 0 }}
@@ -202,7 +201,7 @@ export function RoiCalculator() {
               </ResponsiveContainer>
             </div>
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {breakEvenMonth && (
                 <div className="rounded-xl border border-border bg-muted p-5 text-center">
                   <p className="text-sm text-muted-foreground">Megtérülés</p>
@@ -230,6 +229,17 @@ export function RoiCalculator() {
                   </p>
                 </div>
               ))}
+              <div className="rounded-xl border border-border bg-muted p-5 text-center">
+                <p className="text-sm text-muted-foreground">
+                  Évente ennyivel nő
+                </p>
+                <p
+                  className="mt-1 font-heading text-2xl font-bold"
+                  style={{ color: "#16a34a" }}
+                >
+                  {formatHuf((monthlyFee - MONTHLY_COST) * 12)}
+                </p>
+              </div>
             </div>
           </>
         )}

@@ -32,13 +32,14 @@ export default function Home() {
       </main>
       <Footer />
       <p className="sr-only">
-        Időpontfoglaló rendszer, online időpontfoglalás, fodrász időpontfoglaló,
-        borbély időpontfoglaló, szépségszalon foglalási rendszer, szalon kezelő
-        szoftver, online foglalórendszer, fodrász szoftver, borbély szoftver,
-        saját foglalórendszer, foglalórendszer szalonoknak, Salonic alternatíva,
-        Booked4us alternatíva, BWNET alternatíva, Reservio alternatíva, Fresha
-        alternatíva, ingyenes időpontfoglaló, automatikus emlékeztetők, no-show
-        csökkentés, naptár szinkronizáció, szalon CRM, IdőpontFoglalóm.
+        IdőpontFoglalóm: saját időpontfoglaló rendszer fodrászoknak,
+        borbélyoknak és szépségszalonoknak. Online időpontfoglalás a saját
+        domaineden, fix havi díjjal. Salonic alternatíva, BWNET alternatíva,
+        Reservio alternatíva, Fresha alternatíva, Booked4us alternatíva.
+        Időpontfoglaló szoftver szalonoknak CRM-mel, automatikus
+        emlékeztetőkkel, várólistával és értékelési rendszerrel. Fodrász
+        időpontfoglaló, borbély időpontfoglaló, szépségszalon foglalási
+        rendszer, online foglalórendszer, szalon kezelő szoftver.
       </p>
     </>
   );

@@ -41,7 +41,6 @@ export const metadata: Metadata = {
       "A saját online időpontfoglalód. Egyszeri beüzemelés, fix havi díj, teljes kontroll.",
     url: "https://idopontfoglalom.vercel.app",
     siteName: "IdőpontFoglalóm",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "IdőpontFoglalóm" }],
     locale: "hu_HU",
     type: "website",
   },
@@ -50,7 +49,6 @@ export const metadata: Metadata = {
     title: "IdőpontFoglalóm | Online időpontfoglaló rendszer szalonoknak",
     description:
       "A saját online időpontfoglalód. Egyszeri beüzemelés, fix havi díj, teljes kontroll.",
-    images: ["/og-image.jpg"],
   },
   alternates: {
     canonical: "https://idopontfoglalom.vercel.app",

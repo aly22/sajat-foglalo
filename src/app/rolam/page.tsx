@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Rólam | IdőpontFoglalóm",
-  description: "Dahud Ali, a IdőpontFoglalóm fejlesztője.",
+  description: "Dahud Ali, az IdőpontFoglalóm fejlesztője. Saját időpontfoglaló rendszer szalonoknak, fix havi díjjal.",
 };
 
 export default function AboutPage() {

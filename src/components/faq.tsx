@@ -4,28 +4,28 @@ import { useState } from "react";
 
 const faqs = [
   {
-    q: "Miben más az általad készített honlap, mint a Salonic, BWNET vagy Fresha?",
+    q: "Miben más az általad készített rendszer, mint a Salonic, BWNET vagy Fresha?",
     a: "A rendszer a saját domaineden fut, nem vagy platformhoz kötve. Egyszeri beüzemelés + fix havi díj, nem pedig havi előfizetés ami évről évre nő.",
   },
   {
-    q: "Mit jelent az, hogy 'a tiéd'?",
-    a: "Emailben elküldöd, hogyan képzeled el a honlapodat: a szalonod nevét, helyszínét, szolgáltatásaidat, stb. Én megépítem, a saját domainedre teszem, és kész. Nem egy közös platformon leszel száz másik szalonnal, hanem a saját oldaladon.",
+    q: "Mi az a saját domain?",
+    a: "A honlapod a saját márkaneved alatt érhető el, pl. sajatmarkaneved.hu, és az emailek is ezzel a domainnel végződnek, pl. info@sajatmarkaneved.hu.",
   },
   {
-    q: "Milyen szalonoknak ajánlott?",
+    q: "Mit jelent az, hogy 'a tiéd'?",
+    a: "Emailben megbeszéljük, hogyan képzeled el a honlapodat. Én megépítem, a saját domainedre teszem, és kész. Nem egy közös platformon leszel több száz másik szalonnal, hanem a saját oldaladon.",
+  },
+  {
+    q: "Kiknek ajánlod?",
     a: "Bárkinek, aki időpontfoglalásra épülő szolgáltatást nyújt.",
   },
   {
-    q: "Kapok saját domaint?",
-    a: "Igen. A rendszer a te domaineden fut (pl. foglalj.szalonneved.hu), a te márkáddal, a te arculatoddal.",
-  },
-  {
     q: "Mi történik, ha le akarok állni a szolgáltatással?",
-    a: "Nincs hűségidő. Bármikor leállíthatod a szolgáltatást, mindössze egy havi díj extra fizetési kötelezettséged keletkezik.",
+    a: "Nincs hűségidő. Bármikor szólhatsz, hogy le szeretnéd állítani a szolgáltatást, mindössze egy havi díj extra fizetési kötelezettséged keletkezik.",
   },
   {
-    q: "Hogyan csökkenti a no-show-kat?",
-    a: "Automatikus email emlékeztetőt küldünk a vendégeidnek a foglalásuk előtt, így kevesebb az elfelejtett időpont.",
+    q: "Mennyi idő mire elkészül?",
+    a: "Általában 1-2 hét, attól függően mennyire egyedi az elképzelésed.",
   },
 ];
 

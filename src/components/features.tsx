@@ -7,8 +7,8 @@ import {
   Mail,
   BarChart3,
   Users,
-  Globe,
-  Link2,
+  Clock,
+  Star,
 } from "lucide-react";
 import { Lightbox } from "./lightbox";
 
@@ -40,16 +40,15 @@ const features = [
     screenshot: "/screenshots/08-crm.webp",
   },
   {
-    icon: Globe,
-    title: "Többnyelvű",
-    description: "Magyar és angol nyelv, egy kattintással váltható.",
-    screenshot: null,
+    icon: Clock,
+    title: "Várólista",
+    description: "Ha minden időpont foglalt, a vendég feliratkozik és automatikusan értesítjük, ha felszabadul egy hely.",
+    screenshot: "/screenshots/10-waitlist.webp",
   },
   {
-    icon: Link2,
-    title: "Saját domain",
-    description:
-      "A te neved, a te márkád, nem egy harmadik fél platformja.",
+    icon: Star,
+    title: "Értékelések",
+    description: "Vendégeid értékelhetik a fodrászt és a szalont. A legjobb reklám a saját oldaladon.",
     screenshot: "/screenshots/06-homepage.webp",
   },
 ];
@@ -64,7 +63,7 @@ export function Features() {
           Minden funkció, amire egy szalonnak szüksége van
         </h2>
         <p className="mt-4 text-center text-muted-foreground">
-          Egyetlen rendszer, ami lefedi a teljes foglalási folyamatot.
+          Egyetlen időpontfoglaló rendszer, ami lefedi a teljes foglalási folyamatot.
         </p>
 
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

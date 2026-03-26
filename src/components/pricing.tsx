@@ -4,7 +4,7 @@ const included = [
   "Domain regisztráció és beállítás",
   "Email fiók és küldés beállítás",
   "Teljes testreszabás a márkádhoz",
-  "Adatmigráció a régi rendszerből",
+  "Adatmigráció igény esetén",
   "Betanítás és támogatás",
 ];
 

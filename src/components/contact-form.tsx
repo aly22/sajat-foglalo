@@ -38,7 +38,7 @@ export function ContactForm() {
         </h2>
         <p className="mt-4 text-muted-foreground">
           Add meg az email címed és 24 órán belül felveszem Veled a
-          kapcsolatot.
+          kapcsolatot a saját időpontfoglaló rendszereddel kapcsolatban.
         </p>
 
         {status === "success" ? (
