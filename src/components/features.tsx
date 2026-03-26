@@ -48,7 +48,7 @@ const features = [
   {
     icon: Star,
     title: "Értékelések",
-    description: "Vendégeid értékelhetik a fodrászt és a szalont. A legjobb reklám a saját oldaladon.",
+    description: "Vendégeid értékelhetik a szakembert és a szalont. A legjobb reklám a saját oldaladon.",
     screenshot: "/screenshots/06-homepage.webp",
   },
 ];

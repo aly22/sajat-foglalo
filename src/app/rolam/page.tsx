@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Rólam | IdőpontFoglalóm",
@@ -10,7 +11,14 @@ export default function AboutPage() {
     <main className="flex-1">
       <section className="px-6 py-20 sm:py-32">
         <div className="mx-auto max-w-xl">
-          <h1 className="font-heading text-3xl font-bold sm:text-4xl">
+          <Image
+            src="/pfp.webp"
+            alt="Dahud Ali"
+            width={120}
+            height={120}
+            className="rounded-full border-2 border-border shadow-md"
+          />
+          <h1 className="mt-6 font-heading text-3xl font-bold sm:text-4xl">
             Szia!
           </h1>
           <h2 className="mt-2 font-heading text-xl font-semibold text-muted-foreground sm:text-2xl">
