@@ -4,6 +4,9 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Rólam",
   description: "Dahud Ali, az IdőpontFoglalóm fejlesztője. Saját időpontfoglaló rendszer szalonoknak, fix havi díjjal.",
+  openGraph: {
+    url: "https://idopontfoglalom.hu/rolam",
+  },
   alternates: {
     canonical: "https://idopontfoglalom.hu/rolam",
   },

@@ -4,6 +4,9 @@ import { privacyConfig as c } from "@/config/privacy";
 export const metadata: Metadata = {
   title: "Adatkezelési tájékoztató",
   description: `${c.companyFullName} adatkezelési tájékoztatója. Tudnivalók a személyes adatok kezeléséről, az érintettek jogairól és az adatfeldolgozókról.`,
+  openGraph: {
+    url: "https://idopontfoglalom.hu/adatkezelesi-tajekoztato",
+  },
   alternates: {
     canonical: "https://idopontfoglalom.hu/adatkezelesi-tajekoztato",
   },
