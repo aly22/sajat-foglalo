@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { privacyConfig as c } from "@/config/privacy";
+import { breadcrumbJsonLd } from "@/config/seo";
 
 export const metadata: Metadata = {
   title: "Adatkezelési tájékoztató",
@@ -13,8 +14,18 @@ export const metadata: Metadata = {
 };
 
 export default function PrivacyPage() {
+  const breadcrumbs = breadcrumbJsonLd([
+    { name: "IdőpontFoglalóm", url: "https://idopontfoglalom.hu" },
+    { name: "Adatkezelési tájékoztató", url: "https://idopontfoglalom.hu/adatkezelesi-tajekoztato" },
+  ]);
+
   return (
-    <main className="flex-1 px-6 py-16 sm:py-24">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
+      <main className="flex-1 px-6 py-16 sm:py-24">
       <div className="mx-auto max-w-3xl">
         <div className="rounded-2xl border border-border bg-background p-8 shadow-sm sm:p-12">
           <header className="mb-8">
@@ -273,6 +284,7 @@ export default function PrivacyPage() {
         </div>
       </div>
     </main>
+    </>
   );
 }
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { breadcrumbJsonLd } from "@/config/seo";
 
 export const metadata: Metadata = {
   title: "Rólam",
@@ -13,9 +14,19 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+  const breadcrumbs = breadcrumbJsonLd([
+    { name: "IdőpontFoglalóm", url: "https://idopontfoglalom.hu" },
+    { name: "Rólam", url: "https://idopontfoglalom.hu/rolam" },
+  ]);
+
   return (
-    <main className="flex-1">
-      <section className="px-6 py-20 sm:py-32">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
+      <main className="flex-1">
+        <section className="px-6 py-20 sm:py-32">
         <div className="mx-auto max-w-xl">
           <Image
             src="/pfp.webp"
@@ -57,5 +68,6 @@ export default function AboutPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

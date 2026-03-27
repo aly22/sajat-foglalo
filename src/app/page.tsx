@@ -5,11 +5,15 @@ import { Pricing } from "@/components/pricing";
 import { Faq } from "@/components/faq";
 import { ContactForm } from "@/components/contact-form";
 import { Footer } from "@/components/footer";
-import { softwareJsonLd, localBusinessJsonLd, faqJsonLd } from "@/config/seo";
+import { softwareJsonLd, localBusinessJsonLd, faqJsonLd, websiteJsonLd } from "@/config/seo";
 
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
