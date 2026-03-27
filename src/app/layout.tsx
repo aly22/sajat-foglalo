@@ -15,7 +15,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://idopontfoglalom.vercel.app"),
+  metadataBase: new URL("https://idopontfoglalom.hu"),
   title: {
     default: "IdőpontFoglalóm | Online időpontfoglaló rendszer szalonoknak",
     template: "%s | IdőpontFoglalóm",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "IdőpontFoglalóm | Online időpontfoglaló rendszer szalonoknak",
     description:
       "A saját online időpontfoglalód. Egyszeri beüzemelés, fix havi díj, teljes kontroll.",
-    url: "https://idopontfoglalom.vercel.app",
+    url: "https://idopontfoglalom.hu",
     siteName: "IdőpontFoglalóm",
     locale: "hu_HU",
     type: "website",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
       "A saját online időpontfoglalód. Egyszeri beüzemelés, fix havi díj, teljes kontroll.",
   },
   alternates: {
-    canonical: "https://idopontfoglalom.vercel.app",
+    canonical: "https://idopontfoglalom.hu",
   },
 };
 

@@ -46,7 +46,7 @@ export const softwareJsonLd = {
   operatingSystem: "Web",
   description:
     "Online időpontfoglaló rendszer fodrász- és borbélyszalonok számára. Egyszeri beüzemelés, fix havi díj, teljes kontroll.",
-  url: "https://idopontfoglalom.vercel.app",
+  url: "https://idopontfoglalom.hu",
   offers: {
     "@type": "Offer",
     price: "200000",
@@ -56,7 +56,7 @@ export const softwareJsonLd = {
   author: {
     "@type": "Person",
     name: "Dahud Ali",
-    url: "https://idopontfoglalom.vercel.app/rolam",
+    url: "https://idopontfoglalom.hu/rolam",
   },
 };
 
@@ -66,7 +66,7 @@ export const localBusinessJsonLd = {
   name: "IdőpontFoglalóm",
   description:
     "Online időpontfoglaló rendszer szalonoknak. Saját domain, saját rendszer, fix havi díj.",
-  url: "https://idopontfoglalom.vercel.app",
+  url: "https://idopontfoglalom.hu",
   email: "alidahud@gmail.com",
   telephone: "+36307421723",
   address: {

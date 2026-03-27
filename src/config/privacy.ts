@@ -11,8 +11,8 @@ export const privacyConfig = {
   phoneRaw: "06307421723",
 
   // Website
-  siteUrl: "https://idopontfoglalom.vercel.app",
-  privacyUrl: "https://idopontfoglalom.vercel.app/adatkezelesi-tajekoztato",
+  siteUrl: "https://idopontfoglalom.hu",
+  privacyUrl: "https://idopontfoglalom.hu/adatkezelesi-tajekoztato",
 
   // Data processors
   processors: [
