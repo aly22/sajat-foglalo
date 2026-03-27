@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     q: "Mit jelent az, hogy 'a tiéd'?",
-    a: "Emailben megbeszéljük, hogyan képzeled el a honlapodat. Én megépítem, a saját domainedre teszem, és kész. Nem egy közös platformon leszel több száz másik szalonnal, hanem a saját oldaladon.",
+    a: "Emailben megbeszéljük hogyan képzeled el a honlapodat. Én megépítem, a saját domainedre teszem, és kész. Nem egy közös platformon leszel több száz másik szalonnal, hanem a saját oldaladon.",
   },
   {
     q: "Kiknek ajánlod?",
