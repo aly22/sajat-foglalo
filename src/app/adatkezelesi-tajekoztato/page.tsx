@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description: `${c.companyFullName} adatkezelési tájékoztatója. Tudnivalók a személyes adatok kezeléséről, az érintettek jogairól és az adatfeldolgozókról.`,
   openGraph: {
     url: "https://idopontfoglalom.hu/adatkezelesi-tajekoztato",
+    type: "website",
+    locale: "hu_HU",
+    siteName: "IdőpontFoglalóm",
   },
   alternates: {
     canonical: "https://idopontfoglalom.hu/adatkezelesi-tajekoztato",

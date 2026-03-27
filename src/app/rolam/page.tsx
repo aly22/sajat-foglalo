@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description: "Dahud Ali, az IdőpontFoglalóm fejlesztője. Saját időpontfoglaló rendszer szalonoknak, fix havi díjjal.",
   openGraph: {
     url: "https://idopontfoglalom.hu/rolam",
+    type: "website",
+    locale: "hu_HU",
+    siteName: "IdőpontFoglalóm",
   },
   alternates: {
     canonical: "https://idopontfoglalom.hu/rolam",
