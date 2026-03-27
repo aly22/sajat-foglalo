@@ -4,6 +4,9 @@ import { privacyConfig as c } from "@/config/privacy";
 export const metadata: Metadata = {
   title: `Adatkezelési tájékoztató | ${c.companyName}`,
   description: `${c.companyFullName} adatkezelési tájékoztatója.`,
+  alternates: {
+    canonical: "https://idopontfoglalom.hu/adatkezelesi-tajekoztato",
+  },
 };
 
 export default function PrivacyPage() {

@@ -4,6 +4,9 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Rólam | IdőpontFoglalóm",
   description: "Dahud Ali, az IdőpontFoglalóm fejlesztője. Saját időpontfoglaló rendszer szalonoknak, fix havi díjjal.",
+  alternates: {
+    canonical: "https://idopontfoglalom.hu/rolam",
+  },
 };
 
 export default function AboutPage() {
@@ -29,7 +32,7 @@ export default function AboutPage() {
             <p>
               2022 óta foglalkozom különböző alkalmazások fejlesztésével. Az
               első alkalmazásom, a ServEase, az App Store-on és Play Store-on
-              is elérhető volt, egy személyi edző több mint 1600 foglalást
+              is elérhető volt, egy edző több mint 1600 foglalást
               bonyolított le rajta.
             </p>
             <p>

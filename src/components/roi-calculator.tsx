@@ -117,7 +117,14 @@ export function RoiCalculator() {
           </div>
         </div>
 
-        {monthlyFee === 0 && (
+        {monthlyFee === 0 && rawInput !== "" && (
+          <div className="mx-auto mt-6 max-w-xl rounded-lg border border-border bg-muted p-4 text-center text-sm">
+            Jelenleg nem fizetsz a rendszeredért, de nálunk nincs
+            platformfüggés és a rendszer a tiéd.
+          </div>
+        )}
+
+        {monthlyFee === 0 && rawInput === "" && (
           <p className="mt-6 text-center text-sm text-muted-foreground">
             Add meg a jelenlegi havi díjad a kalkulációhoz.
           </p>

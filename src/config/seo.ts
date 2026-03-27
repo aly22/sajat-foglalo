@@ -23,6 +23,10 @@ const faqs = [
     q: "Mennyi idő mire elkészül?",
     a: "Általában 1-2 hét, attól függően mennyire egyedi az elképzelésed.",
   },
+  {
+    q: "Mennyibe kerülnek az egyedi funkciók?",
+    a: "– Bankkártyás fizetés + automatikus számlázás: 150 E Ft\n– Hűségprogram: 50 E Ft-tól\n– Egyéb funkciókról egyeztetés után tudok árat mondani.",
+  },
 ];
 
 export const faqJsonLd = {

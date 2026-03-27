@@ -5,6 +5,11 @@ import { useState } from "react";
 export function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [features, setFeatures] = useState({
+    bankkartyasFizetes: false,
+    husegprogram: false,
+    egyebFunkciok: false,
+  });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -15,13 +20,14 @@ export function ContactForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email }),
+        body: JSON.stringify({ name, email, features }),
       });
 
       if (res.ok) {
         setStatus("success");
         setName("");
         setEmail("");
+        setFeatures({ bankkartyasFizetes: false, husegprogram: false, egyebFunkciok: false });
       } else {
         setStatus("error");
       }
@@ -58,6 +64,36 @@ export function ContactForm() {
               placeholder="Hogyan szólíthatlak?"
               className="w-full rounded-lg border border-border bg-background px-4 py-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none"
             />
+            <div className="space-y-2 text-left text-sm text-muted-foreground">
+              <p className="font-medium text-foreground">Igényelt funkciók (opcionális)</p>
+              <label className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={features.bankkartyasFizetes}
+                  onChange={(e) => setFeatures({ ...features, bankkartyasFizetes: e.target.checked })}
+                  className="h-4 w-4 rounded border-border accent-accent"
+                />
+                Bankkártyás előlegfizetés
+              </label>
+              <label className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={features.husegprogram}
+                  onChange={(e) => setFeatures({ ...features, husegprogram: e.target.checked })}
+                  className="h-4 w-4 rounded border-border accent-accent"
+                />
+                Hűségprogram
+              </label>
+              <label className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={features.egyebFunkciok}
+                  onChange={(e) => setFeatures({ ...features, egyebFunkciok: e.target.checked })}
+                  className="h-4 w-4 rounded border-border accent-accent"
+                />
+                Egyéb funkciók
+              </label>
+            </div>
             <div className="flex gap-3">
               <input
                 type="email"

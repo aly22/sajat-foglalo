@@ -72,7 +72,7 @@ export default function Image() {
             marginTop: "16px",
           }}
         >
-          Egyszeri beüzemelés. Fix havi díj. Teljes kontroll.
+          A tiéd. Egyszeri beüzemelés, fix havi díj, teljes kontroll.
         </p>
       </div>
     ),

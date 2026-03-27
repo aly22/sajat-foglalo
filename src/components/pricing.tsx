@@ -6,6 +6,7 @@ const included = [
   "Teljes testreszabás a márkádhoz",
   "Adatmigráció igény esetén",
   "Betanítás és támogatás",
+  "Egyedi funkciók felárasak",
 ];
 
 export function Pricing() {
