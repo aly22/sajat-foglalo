@@ -1,12 +1,12 @@
-import { Check } from "lucide-react";
+import { Check, Minus } from "lucide-react";
 
-const included = [
-  "Domain regisztráció és beállítás",
-  "Email fiók és küldés beállítás",
-  "Teljes testreszabás a márkádhoz",
-  "Adatmigráció igény esetén",
-  "Betanítás és támogatás",
-  "Egyedi funkciók felárasak",
+const included: { text: string; extra?: boolean }[] = [
+  { text: "Domain regisztráció és beállítás" },
+  { text: "Email fiók és küldés beállítás" },
+  { text: "Teljes testreszabás a márkádhoz" },
+  { text: "Adatmigráció igény esetén" },
+  { text: "Betanítás és támogatás" },
+  { text: "Egyedi funkciók felárasak", extra: true },
 ];
 
 export function Pricing() {
@@ -36,9 +36,13 @@ export function Pricing() {
               </p>
               <ul className="mt-6 space-y-3 text-left text-sm">
                 {included.map((item) => (
-                  <li key={item} className="flex items-start gap-2">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-success" />
-                    <span>{item}</span>
+                  <li key={item.text} className="flex items-start gap-2">
+                    {item.extra ? (
+                      <Minus className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" />
+                    ) : (
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-success" />
+                    )}
+                    <span>{item.text}</span>
                   </li>
                 ))}
               </ul>

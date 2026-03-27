@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Rólam | IdőpontFoglalóm",
+  title: "Rólam",
   description: "Dahud Ali, az IdőpontFoglalóm fejlesztője. Saját időpontfoglaló rendszer szalonoknak, fix havi díjjal.",
   alternates: {
     canonical: "https://idopontfoglalom.hu/rolam",

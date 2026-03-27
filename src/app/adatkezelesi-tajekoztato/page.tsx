@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { privacyConfig as c } from "@/config/privacy";
 
 export const metadata: Metadata = {
-  title: `Adatkezelési tájékoztató | ${c.companyName}`,
-  description: `${c.companyFullName} adatkezelési tájékoztatója.`,
+  title: "Adatkezelési tájékoztató",
+  description: `${c.companyFullName} adatkezelési tájékoztatója. Tudnivalók a személyes adatok kezeléséről, az érintettek jogairól és az adatfeldolgozókról.`,
   alternates: {
     canonical: "https://idopontfoglalom.hu/adatkezelesi-tajekoztato",
   },
