@@ -22,7 +22,8 @@ export function Hero() {
             role="button"
             tabIndex={0}
             onClick={() => setLightbox(true)}
-            onKeyDown={(e) => e.key === "Enter" && setLightbox(true)}
+            onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && setLightbox(true)}
+            aria-label="Képernyőkép nagyítása"
             className="cursor-zoom-in"
             style={{ position: "relative", zIndex: 10 }}
           >

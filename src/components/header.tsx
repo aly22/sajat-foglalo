@@ -4,7 +4,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md px-6 py-4">
       <div className="mx-auto flex max-w-5xl items-center justify-between">
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center" aria-label="IdőpontFoglalóm főoldal">
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-xs font-extrabold text-white">
             IF
           </span>

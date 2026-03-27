@@ -81,7 +81,8 @@ export function Features() {
                     role="button"
                     tabIndex={0}
                     onClick={() => setLightbox({ src: f.screenshot, alt: f.screenshotCaption || f.title })}
-                    onKeyDown={(e) => e.key === "Enter" && setLightbox({ src: f.screenshot, alt: f.screenshotCaption || f.title })}
+                    onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && setLightbox({ src: f.screenshot, alt: f.screenshotCaption || f.title })}
+                    aria-label={`Képernyőkép nagyítása: ${f.title}`}
                     className="cursor-pointer overflow-hidden rounded-md border border-border p-1 shadow-sm transition hover:shadow-md"
                     style={{ position: "relative", zIndex: 10 }}
                   >

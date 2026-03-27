@@ -62,6 +62,7 @@ export function ContactForm() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Hogyan szólíthatlak?"
+              aria-label="Név"
               className="w-full rounded-lg border border-border bg-background px-4 py-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none"
             />
             <div className="space-y-2 text-left text-sm text-muted-foreground">
@@ -101,6 +102,7 @@ export function ContactForm() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="pelda@email.hu"
+                aria-label="Email cím"
                 className="min-w-0 flex-1 rounded-lg border border-border bg-background px-4 py-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none"
               />
               <button

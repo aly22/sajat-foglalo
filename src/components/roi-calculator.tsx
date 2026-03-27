@@ -192,14 +192,14 @@ export function RoiCalculator() {
                   {breakEvenMonth && (
                     <ReferenceLine
                       x={breakEvenMonth}
-                      stroke="#16a34a"
+                      stroke="#15803d"
                       strokeDasharray="4 4"
                       strokeWidth={2}
                       label={{
                         value: `Megtérülés: ${periodLabel(breakEvenMonth)}`,
                         position: "insideTopRight",
                         fontSize: 12,
-                        fill: "#16a34a",
+                        fill: "#15803d",
                         offset: 10,
                       }}
                     />
@@ -214,7 +214,7 @@ export function RoiCalculator() {
                   <p className="text-sm text-muted-foreground">Megtérülés</p>
                   <p
                     className="mt-1 font-heading text-2xl font-bold"
-                    style={{ color: "#16a34a" }}
+                    style={{ color: "#15803d" }}
                   >
                     {periodLabel(breakEvenMonth)}
                   </p>
@@ -230,7 +230,7 @@ export function RoiCalculator() {
                   </p>
                   <p
                     className="mt-1 font-heading text-2xl font-bold"
-                    style={{ color: "#16a34a" }}
+                    style={{ color: "#15803d" }}
                   >
                     {formatHuf(m.savings)}
                   </p>
@@ -242,7 +242,7 @@ export function RoiCalculator() {
                 </p>
                 <p
                   className="mt-1 font-heading text-2xl font-bold"
-                  style={{ color: "#16a34a" }}
+                  style={{ color: "#15803d" }}
                 >
                   {formatHuf((monthlyFee - MONTHLY_COST) * 12)}
                 </p>
