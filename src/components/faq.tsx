@@ -5,7 +5,7 @@ import { useState } from "react";
 const faqs = [
   {
     q: "Miben más az általad készített rendszer, mint a Salonic, BWNET vagy Fresha?",
-    a: "A saját domaineden fut, nem vagy platformhoz kötve. Egyszeri beüzemelés + fix havi díj, nem pedig havi előfizetés ami évről évre nő.",
+    a: "A saját domaineden fut, nem vagy platformhoz kötve. Egyszeri beüzemelési- és fix havi díj, nem pedig havi előfizetés ami évről évre nő.",
   },
   {
     q: "Mi az a saját domain?",

@@ -39,7 +39,7 @@ export default function Home() {
         Az IdőpontFoglalóm keretében saját online időpontfoglaló rendszert
         építek fodrászoknak, borbélyoknak és szépségszalonoknak. Nem egy közös
         platformon osztozol más szalonokkal, hanem a saját domaineden fut, a
-        saját márkáddal. Egyszeri beüzemelés után fix havi díjat fizetsz, nincs
+        saját márkáddal. Egyszeri beüzemelési- és fix havi díjat fizetsz, nincs
         platformfüggés, és bármikor leállíthatod. A rendszerben van online
         foglalás, automatikus emlékeztetők, ügyfél CRM, statisztikák, várólista
         és értékelési rendszer.

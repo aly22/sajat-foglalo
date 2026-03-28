@@ -15,7 +15,7 @@ export function Hero() {
           A saját online időpontfoglaló rendszered.
         </h1>
         <p className="mt-6 text-lg text-muted-foreground sm:text-xl">
-          A tiéd. Egyszeri beüzemelés, fix havi díj, teljes kontroll.
+          A tiéd. Egyszeri beüzemelési- és fix havi díj, teljes kontroll.
         </p>
         <div className="relative mt-14">
           <div

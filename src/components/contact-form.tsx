@@ -5,6 +5,7 @@ import { useState } from "react";
 export function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [category, setCategory] = useState("");
   const [features, setFeatures] = useState({
     bankkartyasFizetes: false,
     husegprogram: false,
@@ -20,13 +21,14 @@ export function ContactForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, features }),
+        body: JSON.stringify({ name, email, category, features }),
       });
 
       if (res.ok) {
         setStatus("success");
         setName("");
         setEmail("");
+        setCategory("");
         setFeatures({ bankkartyasFizetes: false, husegprogram: false, egyebFunkciok: false });
       } else {
         setStatus("error");
@@ -65,6 +67,44 @@ export function ContactForm() {
               aria-label="Név"
               className="w-full rounded-lg border border-border bg-background px-4 py-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none"
             />
+            <select
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+              aria-label="Milyen típusú vállalkozásod van?"
+              className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none"
+            >
+              <option value="">Milyen típusú vállalkozásod van?</option>
+              <optgroup label="Szépségipar">
+                <option value="Szépségszalon">Szépségszalon</option>
+                <option value="Kozmetika">Kozmetika</option>
+                <option value="Fodrászat / Hajstúdió">Fodrászat / Hajstúdió</option>
+                <option value="Barbershop">Barbershop</option>
+                <option value="Smink / Make-up">Smink / Make-up</option>
+                <option value="Manikűr, Pedikűr">Manikűr, Pedikűr</option>
+                <option value="Szempilla">Szempilla</option>
+                <option value="Szolárium">Szolárium</option>
+                <option value="Sminktetováló">Sminktetováló</option>
+                <option value="Masszázsszalon">Masszázsszalon</option>
+                <option value="Gyanta szalon">Gyanta szalon</option>
+                <option value="Alakformáló stúdió">Alakformáló stúdió</option>
+                <option value="Szemöldök">Szemöldök</option>
+              </optgroup>
+              <optgroup label="Egészségügy">
+                <option value="Gyógytornász">Gyógytornász</option>
+                <option value="Gyógymasszőr">Gyógymasszőr</option>
+                <option value="Hajgyógyászat">Hajgyógyászat</option>
+                <option value="Szépségklinika">Szépségklinika</option>
+                <option value="Lézerközpont">Lézerközpont</option>
+                <option value="Orvos">Orvos</option>
+                <option value="Fogorvos">Fogorvos</option>
+                <option value="Természetgyógyász">Természetgyógyász</option>
+              </optgroup>
+              <optgroup label="Sport és wellness">
+                <option value="Személyi edző">Személyi edző</option>
+                <option value="Csoportos edző">Csoportos edző</option>
+              </optgroup>
+              <option value="Egyéb">Egyéb</option>
+            </select>
             <div className="space-y-2 text-left text-sm text-muted-foreground">
               <p className="font-medium text-foreground">Igényelt funkciók (opcionális)</p>
               <label className="flex items-center gap-2">
