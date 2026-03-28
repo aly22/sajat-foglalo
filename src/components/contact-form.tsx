@@ -5,6 +5,7 @@ import { useState } from "react";
 export function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [businessName, setBusinessName] = useState("");
   const [category, setCategory] = useState("");
   const [features, setFeatures] = useState({
     bankkartyasFizetes: false,
@@ -21,13 +22,14 @@ export function ContactForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, category, features }),
+        body: JSON.stringify({ name, businessName, email, category, features }),
       });
 
       if (res.ok) {
         setStatus("success");
         setName("");
         setEmail("");
+        setBusinessName("");
         setCategory("");
         setFeatures({ bankkartyasFizetes: false, husegprogram: false, egyebFunkciok: false });
       } else {
@@ -45,7 +47,7 @@ export function ContactForm() {
           Beszéljünk!
         </h2>
         <p className="mt-4 text-muted-foreground">
-          Add meg az email címed és 24 órán belül felveszem Veled a
+          Töltsd ki az alábbi űrlapot és 24 órán belül felveszem Veled a
           kapcsolatot.
         </p>
 
@@ -57,14 +59,23 @@ export function ContactForm() {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="mt-8 space-y-3">
+            <p className="text-left text-xs text-muted-foreground"><span className="text-destructive">*</span> kötelező</p>
             <input
               type="text"
               required
               minLength={2}
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="Hogyan szólíthatlak?"
+              placeholder="Hogyan szólíthatlak? *"
               aria-label="Név"
+              className="w-full rounded-lg border border-border bg-background px-4 py-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none"
+            />
+            <input
+              type="text"
+              value={businessName}
+              onChange={(e) => setBusinessName(e.target.value)}
+              placeholder="Vállalkozásod neve (opcionális)"
+              aria-label="Vállalkozás neve"
               className="w-full rounded-lg border border-border bg-background px-4 py-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none"
             />
             <select
@@ -141,7 +152,7 @@ export function ContactForm() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="pelda@email.hu"
+                placeholder="pelda@email.hu *"
                 aria-label="Email cím"
                 className="min-w-0 flex-1 rounded-lg border border-border bg-background px-4 py-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none"
               />
