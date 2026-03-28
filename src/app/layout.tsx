@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | IdőpontFoglalóm",
   },
   description:
-    "Online időpontfoglaló rendszer fodrász- és borbélyszalonok számára. A tiéd. Egyszeri beüzemelési- és fix havi díj, teljes kontroll.",
+    "Online időpontfoglaló rendszer fodrászoknak, szalonoknak és edzőknek. A tiéd. Egyszeri beüzemelési- és fix havi díj, teljes kontroll.",
   authors: [{ name: "Dahud Ali" }],
   creator: "Dahud Ali",
   robots: {

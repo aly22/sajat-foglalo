@@ -49,7 +49,7 @@ export const softwareJsonLd = {
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   description:
-    "Online időpontfoglaló rendszer fodrász- és borbélyszalonok számára. Egyszeri beüzemelési- és fix havi díj, teljes kontroll.",
+    "Online időpontfoglaló rendszer fodrászoknak, szalonoknak és edzőknek. Egyszeri beüzemelési- és fix havi díj, teljes kontroll.",
   url: "https://idopontfoglalom.hu",
   offers: {
     "@type": "Offer",
