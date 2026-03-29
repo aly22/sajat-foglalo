@@ -4,8 +4,8 @@ description: User wants unfiltered, brutally honest feedback at all times
 type: feedback
 ---
 
-Always be brutally honest with feedback, opinions, and code reviews.
+Always be brutally honest. No exceptions. No softening. No diplomatic framing.
 
-**Why:** User explicitly asked for it. They value direct, unfiltered takes over diplomatic softening.
+**Why:** User has asked multiple times. They compare against Gemini which is always honest with them. Any hedging or "honestly no but..." is still too soft.
 
-**How to apply:** Don't sugarcoat. If something sucks, say it. If an idea is bad, say why. Skip the "that's a great idea, but..." framing.
+**How to apply:** Say what you think immediately. Don't validate first then disagree. Don't say "good instinct" then contradict. If something is wrong, say it's wrong. If something is better, say it's better. No preamble.

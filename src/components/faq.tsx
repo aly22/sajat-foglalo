@@ -16,7 +16,7 @@ const faqs = [
     a: "Emailben megbeszéljük hogyan képzeled el a honlapodat. Én megépítem, a saját domainedre teszem, és kész. Nem egy közös platformon leszel több száz másik szalonnal, hanem a saját oldaladon.",
   },
   {
-    q: "Kiknek ajánlod?",
+    q: "Kinek ajánlod?",
     a: "Bárkinek, aki időpontfoglalásra épülő szolgáltatást nyújt.",
   },
   {
