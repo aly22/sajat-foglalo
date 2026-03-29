@@ -78,6 +78,15 @@ export function ContactForm() {
               aria-label="Vállalkozás neve"
               className="w-full rounded-lg border border-border bg-background px-4 py-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none"
             />
+            <input
+              type="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="pelda@email.hu *"
+              aria-label="Email cím"
+              className="w-full rounded-lg border border-border bg-background px-4 py-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none"
+            />
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value)}
@@ -117,7 +126,7 @@ export function ContactForm() {
               <option value="Egyéb">Egyéb</option>
             </select>
             <div className="space-y-2 text-left text-sm text-muted-foreground">
-              <p className="font-medium text-foreground">Igényelt funkciók (opcionális)</p>
+              <p className="font-medium text-foreground">Igényelt egyedi funkciók (opcionális)</p>
               <label className="flex items-center gap-2">
                 <input
                   type="checkbox"
@@ -146,24 +155,6 @@ export function ContactForm() {
                 Egyéb funkciók
               </label>
             </div>
-            <div className="flex gap-3">
-              <input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="pelda@email.hu *"
-                aria-label="Email cím"
-                className="min-w-0 flex-1 rounded-lg border border-border bg-background px-4 py-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none"
-              />
-              <button
-                type="submit"
-                disabled={status === "loading"}
-                className="shrink-0 rounded-lg bg-accent px-6 py-3 font-semibold text-accent-foreground shadow-sm transition hover:bg-accent/90 disabled:opacity-50"
-              >
-                {status === "loading" ? "Küldés..." : "Érdekel!"}
-              </button>
-            </div>
             <label className="flex items-start gap-2 text-left text-sm text-muted-foreground">
               <input
                 type="checkbox"
@@ -182,6 +173,13 @@ export function ContactForm() {
                 .
               </span>
             </label>
+            <button
+              type="submit"
+              disabled={status === "loading"}
+              className="w-full rounded-lg bg-accent px-6 py-3 font-semibold text-accent-foreground shadow-sm transition hover:bg-accent/90 disabled:opacity-50"
+            >
+              {status === "loading" ? "Küldés..." : "Érdekel!"}
+            </button>
             {status === "error" && (
               <p className="mt-3 text-sm text-destructive">
                 Hiba történt, próbáld újra.
