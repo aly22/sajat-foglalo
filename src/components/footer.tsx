@@ -11,6 +11,12 @@ export function Footer() {
             Rólam
           </a>
           <a
+            href="/impresszum"
+            className="transition hover:text-foreground"
+          >
+            Impresszum
+          </a>
+          <a
             href="/adatkezelesi-tajekoztato"
             className="transition hover:text-foreground"
           >
