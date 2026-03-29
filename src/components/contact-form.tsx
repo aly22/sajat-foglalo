@@ -47,8 +47,12 @@ export function ContactForm() {
           Beszéljünk!
         </h2>
         <p className="mt-4 text-muted-foreground">
-          Töltsd ki az alábbi űrlapot és 24 órán belül felveszem Veled a
-          kapcsolatot.
+          Írj az{" "}
+          <a href="mailto:alidahud@gmail.com" className="text-accent underline">
+            alidahud@gmail.com
+          </a>{" "}
+          email címre vagy töltsd ki az alábbi űrlapot és 24 órán belül
+          felveszem Veled a kapcsolatot.
         </p>
 
         {status === "success" ? (
