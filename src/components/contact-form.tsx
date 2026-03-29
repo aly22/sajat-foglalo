@@ -48,7 +48,7 @@ export function ContactForm() {
         </h2>
         <p className="mt-4 text-muted-foreground">
           Írj az{" "}
-          <a href="mailto:alidahud@gmail.com" className="text-accent underline">
+          <a href="mailto:alidahud@gmail.com" className="underline">
             alidahud@gmail.com
           </a>{" "}
           email címre vagy töltsd ki az alábbi űrlapot és 24 órán belül
@@ -170,7 +170,7 @@ export function ContactForm() {
                 <a
                   href="/adatkezelesi-tajekoztato"
                   target="_blank"
-                  className="text-accent underline"
+                  className="underline"
                 >
                   adatkezelési tájékoztatót
                 </a>
