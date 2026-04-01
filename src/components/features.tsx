@@ -22,7 +22,7 @@ const features = [
   {
     icon: Mail,
     title: "Email értesítések",
-    description: "Foglalás megerősítés, emlékeztetők, értékelés kérés, heti összefoglaló, stb.",
+    description: "Foglalás megerősítés, emlékeztetők, értékelés kérés, heti összesítő, stb.",
     screenshots: [
       { src: "/screenshots/weekly-summary.webp", caption: "Minden vasárnap reggel megtudod, milyen volt a heted" },
       { src: "/screenshots/email-confirmation.webp", caption: "Foglalás megerősítés" },
