@@ -17,44 +17,54 @@ const features = [
     icon: CalendarCheck,
     title: "Online foglalás",
     description: "Vendégeid 0-24 foglalhatnak, te csak dolgozol.",
-    screenshot: "/screenshots/01-booking-mobile.webp",
-    screenshotCaption: "Foglalj mobilról 30 másodperc alatt",
+    screenshots: [{ src: "/screenshots/booking-form.webp", caption: "Foglalj mobilról 30 másodperc alatt" }],
   },
   {
     icon: Mail,
     title: "Email értesítések",
     description: "Foglalás megerősítés, emlékeztetők, értékelés kérés, heti összefoglaló, stb.",
-    screenshot: "/screenshots/02-email-confirmation.webp",
+    screenshots: [
+      { src: "/screenshots/weekly-summary.webp", caption: "Minden vasárnap reggel megtudod, milyen volt a heted" },
+      { src: "/screenshots/email-confirmation.webp", caption: "Foglalás megerősítés" },
+      { src: "/screenshots/email-reminder.webp", caption: "Időpont emlékeztető" },
+      { src: "/screenshots/email-reminder-today.webp", caption: "Ma találkozunk!" },
+      { src: "/screenshots/email-rating.webp", caption: "Értékeld az élményed!" },
+      { src: "/screenshots/email-reschedule.webp", caption: "Időpont átütemezve" },
+      { src: "/screenshots/email-cancellation.webp", caption: "Időpont lemondva" },
+    ],
   },
   {
     icon: BarChart3,
     title: "Statisztikák",
     description: "Bevétel, kihasználtság, visszatérési arány egy helyen.",
-    screenshot: "/screenshots/05-statistics.webp",
+    screenshots: [{ src: "/screenshots/05-statistics.webp", caption: "Statisztikák" }],
   },
   {
     icon: Users,
     title: "Ügyfélkezelés",
     description:
       "CRM: ki mennyit költött, hányszor jött, mikor volt utoljára.",
-    screenshot: "/screenshots/08-crm.webp",
+    screenshots: [{ src: "/screenshots/08-crm.webp", caption: "Lásd ki mennyit költött, milyen gyakran jön és mikor volt utoljára" }],
   },
   {
     icon: Clock,
     title: "Várólista",
     description: "Ha minden időpont foglalt, a vendég feliratkozik és automatikusan értesítjük, ha felszabadul egy hely.",
-    screenshot: "/screenshots/10-waitlist.webp",
+    screenshots: [
+      { src: "/screenshots/10-waitlist.webp", caption: "Várólista" },
+      { src: "/screenshots/email-waitlist.webp", caption: "Felszabadult egy hely!" }
+    ],
   },
   {
     icon: Star,
     title: "Értékelések",
     description: "Vendégeid értékelhetik a szakembert és a szalont. A legjobb reklám a saját oldaladon.",
-    screenshot: "/screenshots/06-homepage.webp",
+    screenshots: [{ src: "/screenshots/06-homepage.webp", caption: "Értékelések a saját oldaladon" }],
   },
 ];
 
 export function Features() {
-  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+  const [lightbox, setLightbox] = useState<{ images: { src: string; caption: string }[]; index: number } | null>(null);
 
   return (
     <section id="funkciok" className="bg-muted px-6 py-20 sm:py-28">
@@ -76,18 +86,18 @@ export function Features() {
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10">
                   <f.icon className="h-5 w-5 text-accent" />
                 </div>
-                {f.screenshot && (
+                {f.screenshots.length > 0 && (
                   <div
                     role="button"
                     tabIndex={0}
-                    onClick={() => setLightbox({ src: f.screenshot, alt: f.screenshotCaption || f.title })}
-                    onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && setLightbox({ src: f.screenshot, alt: f.screenshotCaption || f.title })}
+                    onClick={() => setLightbox({ images: f.screenshots, index: 0 })}
+                    onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && setLightbox({ images: f.screenshots, index: 0 })}
                     aria-label={`Képernyőkép nagyítása: ${f.title}`}
                     className="cursor-pointer overflow-hidden rounded-md border border-border p-1 shadow-sm transition hover:shadow-md"
                     style={{ position: "relative", zIndex: 10 }}
                   >
                     <Image
-                      src={f.screenshot}
+                      src={f.screenshots[0].src}
                       alt={f.title}
                       width={35}
                       height={35}
@@ -111,9 +121,16 @@ export function Features() {
 
       {lightbox && (
         <Lightbox
-          src={lightbox.src}
-          alt={lightbox.alt}
+          src={lightbox.images[lightbox.index].src}
+          alt={lightbox.images[lightbox.index].caption}
           onClose={() => setLightbox(null)}
+          onPrev={lightbox.images.length > 1 && lightbox.index > 0
+            ? () => setLightbox({ ...lightbox, index: lightbox.index - 1 })
+            : undefined}
+          onNext={lightbox.images.length > 1 && lightbox.index < lightbox.images.length - 1
+            ? () => setLightbox({ ...lightbox, index: lightbox.index + 1 })
+            : undefined}
+          counter={lightbox.images.length > 1 ? `${lightbox.index + 1} / ${lightbox.images.length}` : undefined}
         />
       )}
     </section>

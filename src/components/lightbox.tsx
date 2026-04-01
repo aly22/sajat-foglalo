@@ -4,29 +4,41 @@ import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
-const MOBILE_SCREENSHOTS = ["01-booking-mobile", "02-email-confirmation", "03-admin-mobile", "04-appointments"];
+const MOBILE_SCREENSHOTS = ["booking-form", "email-confirmation", "barber-calendar", "weekly-summary", "email-waitlist", "email-cancellation", "email-rating", "email-reminder", "email-reschedule"];
 
 function getImageDimensions(src: string) {
   const isMobile = MOBILE_SCREENSHOTS.some((s) => src.includes(s));
-  return isMobile ? { width: 900, height: 1260 } : { width: 1800, height: 1260 };
+  return isMobile ? { width: 1260, height: 1260 } : { width: 1800, height: 1260 };
 }
 
 export function Lightbox({
   src,
   alt,
   onClose,
+  onPrev,
+  onNext,
+  counter,
 }: {
   src: string;
   alt: string;
   onClose: () => void;
+  onPrev?: () => void;
+  onNext?: () => void;
+  counter?: string;
 }) {
   const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setLoaded(false);
+  }, [src]);
 
   const handleKey = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft" && onPrev) onPrev();
+      if (e.key === "ArrowRight" && onNext) onNext();
     },
-    [onClose]
+    [onClose, onPrev, onNext]
   );
 
   useEffect(() => {
@@ -70,12 +82,35 @@ export function Lightbox({
             />
           </TransformComponent>
         </TransformWrapper>
-        {alt && (
-          <p className="mt-3 text-center text-sm text-white/80">{alt}</p>
+        {(alt || counter) && (
+          <div className="mt-3 text-center text-sm text-white/80">
+            {alt && <p>{alt}</p>}
+            {counter && <p className="mt-1 text-white/50">{counter}</p>}
+          </div>
+        )}
+        {onPrev && (
+          <button
+            onClick={onPrev}
+            aria-label="Előző"
+            className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-white shadow-lg"
+            style={{ zIndex: 60 }}
+          >
+            ‹
+          </button>
+        )}
+        {onNext && (
+          <button
+            onClick={onNext}
+            aria-label="Következő"
+            className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-white shadow-lg"
+            style={{ zIndex: 60 }}
+          >
+            ›
+          </button>
         )}
         <button
           onClick={onClose}
-          aria-label="Bezarás"
+          aria-label="Bezárás"
           className="absolute -top-3 -right-3 flex h-8 w-8 items-center justify-center rounded-full bg-white text-black shadow-lg"
           style={{ zIndex: 60 }}
         >
