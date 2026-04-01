@@ -148,6 +148,59 @@ export default function PrivacyPage() {
             </section>
 
             <section>
+              <h2>Közösségi oldalak</h2>
+              <h3>1. Az adatgyűjtés ténye, a kezelt adatok köre</h3>
+              <p>Instagram és egyéb közösségi oldalakon regisztrált felhasználói nevek, nyilvános profilképek, illetve üzenetváltások.</p>
+              <p><strong>2. Az érintettek köre:</strong> Mindazon felhasználók, akik regisztráltak a felsorolt közösségi oldalakon, és követték a Szolgáltató oldalát, üzenetben felvették a kapcsolatot az adatkezelővel, vagy akikkel az adatkezelő felvette a kapcsolatot.</p>
+              <p><strong>3. Az adatgyűjtés célja:</strong> A közösségi oldalak lehetőségeinek kihasználása a weboldal tartalmainak, szolgáltatásainak megosztására, népszerűsítésére, illetve az érdeklődők tájékoztatására.</p>
+              <p><strong>4. Az adatkezelés időtartama, módja:</strong> Az adatkezelés időtartama, az adatok törlésének határideje, az adatok megismerésére jogosult lehetséges adatkezelők személye és az érintettek adatkezeléssel kapcsolatos jogainak ismertetése: Az adatok forrásáról, azok kezeléséről, illetve az átadás módjáról, és jogalapjáról az adott közösségi oldalon tájékozódhat az érintett. Az adatkezelés a közösségi oldalakon valósul meg, így az adatkezelés időtartamára, módjára, illetve az adatok törlési és módosítási lehetőségeire az adott közösségi oldal szabályozása vonatkozik.</p>
+              <p><strong>5. Az adatkezelés jogalapja:</strong> az érintett önkéntes hozzájárulása, amelyet a közösségi oldalakon keresztül ad meg.</p>
+
+              <h3>Instagram / Meta közös adatkezelés</h3>
+              <p>Az adatkezelő az Instagram (Meta) platformon is jelen van. A közösségi oldalon megvalósított statisztikai célú adatkezelés az adatkezelő és a Meta Platforms Ireland Ltd. (4 Grand Canal Square, Grand Canal Harbour, D2 Dublin, Írország) közös adatkezelésének minősül.</p>
+              <p>Az adatkezelő a közösségi oldalon privát üzenetben is megkeresheti az érintetteket szolgáltatásaival kapcsolatban.</p>
+
+              <h4>1. Érintettek kategóriái</h4>
+              <ul>
+                <li>Azok, akik regisztráltak az Instagram közösségi oldalon és követték az adatkezelő oldalát.</li>
+                <li>Azok, akik privát üzenetben felkeresik az adatkezelőt.</li>
+                <li>Azok, akiket az adatkezelő privát üzenetben megkeres.</li>
+              </ul>
+
+              <h4>2. Az adatkezelés célja</h4>
+              <p>Az adatkezelés célja az Instagram közösségi oldalon az adatkezelő tevékenységének, szolgáltatásának a megosztása, illetve népszerűsítése. Az érintett privát üzenetben megadott adatait az adatkezelő felhasználhatja ahhoz, hogy az üzenetre választ adjon. Az adatkezelő a közösségi oldalakon elérhető nyilvános adatokat felhasználhatja kapcsolatfelvétel céljából.</p>
+
+              <h4>3. Az adatkezelés jogalapja</h4>
+              <p>Az adatkezelés a GDPR 6. cikk (1) bekezdés a) pontján alapul, az adatkezelés jogalapja az érintett hozzájárulása a személyes adatai kezeléséhez az Instagram közösségi oldalon.</p>
+
+              <h4>4. A kezelt adatok köre</h4>
+              <ul>
+                <li>az érintett regisztrált neve,</li>
+                <li>nyilvános profilképe,</li>
+                <li>privát üzenetváltások tartalma,</li>
+                <li>egyéb, az érintett által a közösségi oldalon megosztott nyilvános adatok.</li>
+              </ul>
+
+              <h4>5. A kezelt személyes adatok forrása</h4>
+              <p>A kezelt adatok forrása az érintett.</p>
+
+              <h4>6. A hozzájárulás visszavonása</h4>
+              <p>Ön az adatkezeléshez adott hozzájárulását bármikor visszavonhatja, posztját, hozzászólását törölheti. Amennyiben Ön a hozzájárulását visszavonja az adatkezelő törli az Önnel folytatott beszélgetést. A hozzájárulás visszavonása nem érinti a hozzájáruláson alapuló, a visszavonás előtti adatkezelés jogszerűségét.</p>
+
+              <p><strong>A személyes adatokhoz való hozzáférés, törlés, módosítás vagy kezelés korlátozása, illetve az adatok hordozhatósága az alábbi módokon kezdeményezhető:</strong></p>
+              <ContactList />
+
+              <h4>7. Az adatkezelés időtartama</h4>
+              <p>Az érintett hozzájárulásának visszavonásáig; az üzenetváltások legfeljebb 5 évig kerülnek megőrzésre.</p>
+
+              <h4>8. A személyes adatok továbbítása, címzettjei, illetve a címzettek kategóriái</h4>
+              <p>A címzett fogalmát lásd: GDPR 4. cikk 9. pontja. Adatkezelő csak kivételes esetben és jogszabályi kötelezettség alapján adja át az Érintett személyes adatait állami szervek, hatóságok, így különösen bíróság, ügyészség, nyomozó hatóság és szabálysértési hatóság, Nemzeti Adatvédelmi és Információszabadság Hatóság számára.</p>
+
+              <h4>9. Automatizált döntéshozatal</h4>
+              <p>Az adatkezelés során automatizált döntéshozatalra, ideértve a profilalkotást is, nem kerül sor.</p>
+            </section>
+
+            <section>
               <h2>Ügyfélkapcsolatok és egyéb adatkezelések</h2>
               <ol>
                 <li>Amennyiben a szolgáltatások igénybevétele során kérdés merül fel vagy probléma adódik, az érintett a honlapon feltüntetett csatornákon (telefon, e-mail, közösségi oldalak stb.) keresztül felveheti a kapcsolatot az adatkezelővel.</li>

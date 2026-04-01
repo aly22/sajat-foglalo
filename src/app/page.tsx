@@ -4,7 +4,6 @@ import { RoiCalculatorLazy as RoiCalculator } from "@/components/roi-calculator-
 import { Pricing } from "@/components/pricing";
 import { Faq } from "@/components/faq";
 import { ContactForm } from "@/components/contact-form";
-import { Footer } from "@/components/footer";
 import { softwareJsonLd, localBusinessJsonLd, faqJsonLd, websiteJsonLd } from "@/config/seo";
 
 export default function Home() {
@@ -34,7 +33,6 @@ export default function Home() {
         <Faq />
         <ContactForm />
       </main>
-      <Footer />
       <p className="sr-only">
         Az IdőpontFoglalóm keretében saját online időpontfoglaló rendszert
         építek fodrászoknak, borbélyoknak és szépségszalonoknak. Nem egy közös
