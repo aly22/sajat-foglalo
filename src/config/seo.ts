@@ -1,4 +1,4 @@
-const faqs = [
+export const faqs = [
   {
     q: "Miben más az általad készített rendszer, mint a Salonic, BWNET vagy Fresha?",
     a: "A saját domaineden fut, nem vagy platformhoz kötve. Egyszeri beüzemelési- és fix havi díj, nem pedig havi előfizetés ami évről évre nő.",
@@ -26,6 +26,10 @@ const faqs = [
   {
     q: "Mennyibe kerülnek az egyedi funkciók?",
     a: "– Bankkártyás fizetés + automatikus számlázás: 150 E Ft\n– Hűségprogram: 50 E Ft-tól\n– Egyéb funkciókról egyeztetés után tudok árat mondani.",
+  },
+  {
+    q: "Kell előleget fizetni, valamint van garancia?",
+    a: "Igen, 50–100 000 Ft előleget kérek a beüzemelés megkezdése előtt. Az összeget te határozod meg. Ha 30 napon belül jelzed, hogy nem vagy elégedett a rendszereddel, visszakapod az előleget.",
   },
 ];
 
