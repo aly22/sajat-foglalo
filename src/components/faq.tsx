@@ -4,7 +4,7 @@ import { useState } from "react";
 import { faqs } from "@/config/seo";
 
 export function Faq() {
-  const [open, setOpen] = useState<number | null>(null);
+  const [open, setOpen] = useState<number | null>(0);
 
   return (
     <section id="gyik" className="px-6 py-20 sm:py-28">

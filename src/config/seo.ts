@@ -1,5 +1,9 @@
 export const faqs = [
   {
+    q: "Kell előleget fizetni, valamint van garancia?",
+    a: "Igen, 50–100 000 Ft előleget kérek a beüzemelés megkezdése előtt. Az összeget te határozod meg. Ha 30 napon belül jelzed, hogy nem vagy elégedett a rendszereddel, visszakapod az előleget.",
+  },
+  {
     q: "Miben más az általad készített rendszer, mint a Salonic, BWNET vagy Fresha?",
     a: "A saját domaineden fut, nem vagy platformhoz kötve. Egyszeri beüzemelési- és fix havi díj, nem pedig havi előfizetés ami évről évre nő.",
   },
@@ -12,10 +16,6 @@ export const faqs = [
     a: "Emailben megbeszéljük hogyan képzeled el a honlapodat. Én megépítem, a saját domainedre teszem, és kész. Nem egy közös platformon leszel több száz másik szalonnal, hanem a saját oldaladon.",
   },
   {
-    q: "Kinek ajánlod?",
-    a: "Bárkinek, aki időpontfoglalásra épülő szolgáltatást nyújt.",
-  },
-  {
     q: "Mi történik, ha le akarok állni a szolgáltatással?",
     a: "Nincs hűségidő. Bármikor szólhatsz, hogy le szeretnéd állítani a szolgáltatást, mindössze egy havi díj extra fizetési kötelezettséged keletkezik.",
   },
@@ -26,10 +26,6 @@ export const faqs = [
   {
     q: "Mennyibe kerülnek az egyedi funkciók?",
     a: "– Bankkártyás fizetés + automatikus számlázás: 150 E Ft\n– Hűségprogram: 50 E Ft-tól\n– Egyéb funkciókról egyeztetés után tudok árat mondani.",
-  },
-  {
-    q: "Kell előleget fizetni, valamint van garancia?",
-    a: "Igen, 50–100 000 Ft előleget kérek a beüzemelés megkezdése előtt. Az összeget te határozod meg. Ha 30 napon belül jelzed, hogy nem vagy elégedett a rendszereddel, visszakapod az előleget.",
   },
 ];
 
