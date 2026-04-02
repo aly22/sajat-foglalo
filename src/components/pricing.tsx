@@ -68,6 +68,8 @@ export function Pricing() {
 
           <div className="border-t border-border bg-muted/50 px-8 py-4 text-center text-sm text-muted-foreground">
             Nincs hűségidő. Bármikor leállíthatod a szolgáltatást.
+            <br />
+            Az árak szalononként értendőek. Több szalon esetén egyedi ajánlatot adok.
           </div>
         </div>
       </div>

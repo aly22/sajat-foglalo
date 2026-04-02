@@ -12,6 +12,8 @@ export function ContactForm() {
     husegprogram: false,
     egyebFunkciok: false,
   });
+  const [multipleSalons, setMultipleSalons] = useState(false);
+  const [salonCount, setSalonCount] = useState(2);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -22,7 +24,7 @@ export function ContactForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, businessName, email, category, features }),
+        body: JSON.stringify({ name, businessName, email, category, features, salonCount: multipleSalons ? salonCount : 1 }),
       });
 
       if (res.ok) {
@@ -32,6 +34,8 @@ export function ContactForm() {
         setBusinessName("");
         setCategory("");
         setFeatures({ bankkartyasFizetes: false, husegprogram: false, egyebFunkciok: false });
+        setMultipleSalons(false);
+        setSalonCount(2);
       } else {
         setStatus("error");
       }
@@ -158,6 +162,31 @@ export function ContactForm() {
                 />
                 Egyéb funkciók
               </label>
+            </div>
+            <div className="space-y-2 text-left text-sm text-muted-foreground">
+              <label className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={multipleSalons}
+                  onChange={(e) => setMultipleSalons(e.target.checked)}
+                  className="h-4 w-4 rounded border-border accent-accent"
+                />
+                Több szalonom van
+              </label>
+              {multipleSalons && (
+                <div className="ml-6">
+                  <label className="flex items-center gap-2">
+                    <span>Szalonok száma:</span>
+                    <input
+                      type="number"
+                      min={2}
+                      value={salonCount}
+                      onChange={(e) => setSalonCount(Number(e.target.value))}
+                      className="w-16 rounded-lg border border-border bg-background px-2 py-1 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none"
+                    />
+                  </label>
+                </div>
+              )}
             </div>
             <label className="flex items-start gap-2 text-left text-sm text-muted-foreground">
               <input

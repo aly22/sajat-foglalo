@@ -12,6 +12,7 @@ const contactSchema = z.object({
     husegprogram: z.boolean().optional(),
     egyebFunkciok: z.boolean().optional(),
   }).optional(),
+  salonCount: z.number().min(1).optional(),
 });
 
 export async function POST(req: Request) {
@@ -21,7 +22,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: result.error.issues[0].message }, { status: 400 });
   }
 
-  const { name, businessName, email, category, features } = result.data;
+  const { name, businessName, email, category, features, salonCount } = result.data;
 
   const featureList = [
     features?.bankkartyasFizetes && "Bankkártyás előlegfizetés",
@@ -45,13 +46,14 @@ export async function POST(req: Request) {
       from: process.env.SMTP_FROM,
       to: process.env.SMTP_USER,
       subject: `Új érdeklődés: ${name}`,
-      text: `Új érdeklődés érkezett a idopontfoglalom.hu oldalról.\n\nNév: ${name}\nVállalkozás neve: ${businessName || "Nincs megadva"}\nEmail: ${email}\nVállalkozás típusa: ${category || "Nincs megadva"}\nIgényelt funkciók: ${featuresText}`,
+      text: `Új érdeklődés érkezett a idopontfoglalom.hu oldalról.\n\nNév: ${name}\nVállalkozás neve: ${businessName || "Nincs megadva"}\nEmail: ${email}\nVállalkozás típusa: ${category || "Nincs megadva"}\nSzalonok száma: ${salonCount || 1}\nIgényelt funkciók: ${featuresText}`,
       html: `
         <h2>Új érdeklődés</h2>
         <p><strong>Név:</strong> ${name}</p>
         <p><strong>Vállalkozás neve:</strong> ${businessName || "Nincs megadva"}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Vállalkozás típusa:</strong> ${category || "Nincs megadva"}</p>
+        <p><strong>Szalonok száma:</strong> ${salonCount || 1}</p>
         <p><strong>Igényelt funkciók:</strong> ${featuresText}</p>
         <p>A idopontfoglalom.hu oldalról érkezett.</p>
       `,
