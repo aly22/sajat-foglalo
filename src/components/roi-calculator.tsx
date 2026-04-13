@@ -12,7 +12,7 @@ import {
   ReferenceLine,
 } from "recharts";
 
-const SETUP_COST = 200_000;
+const SETUP_COST = 250_000;
 const MONTHLY_COST = 4_000;
 
 function formatHuf(value: number): string {

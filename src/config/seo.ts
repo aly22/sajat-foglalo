@@ -53,7 +53,7 @@ export const softwareJsonLd = {
   url: "https://idopontfoglalom.hu",
   offers: {
     "@type": "Offer",
-    price: "200000",
+    price: "250000",
     priceCurrency: "HUF",
     description: "Egyszeri beüzemelés",
   },
@@ -80,7 +80,7 @@ export const localBusinessJsonLd = {
     postalCode: "7100",
     addressCountry: "HU",
   },
-  priceRange: "200 000 Ft + 4 000 Ft/hó",
+  priceRange: "250 000 Ft + 4 000 Ft/hó",
   areaServed: {
     "@type": "Country",
     name: "HU",

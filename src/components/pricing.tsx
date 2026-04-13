@@ -28,7 +28,7 @@ export function Pricing() {
                 Egyszeri beüzemelés
               </p>
               <p className="mt-4 font-heading text-4xl font-bold">
-                200 000
+                250 000
                 <span className="text-lg font-normal text-muted-foreground">
                   {" "}
                   Ft
