@@ -13,7 +13,8 @@ import {
 } from "recharts";
 
 const SETUP_COST = 250_000;
-const MONTHLY_COST = 4_000;
+const MONTHLY_COST_DEFAULT = 4_000;
+const MONTHLY_COST_LARGE = 10_000;
 
 function formatHuf(value: number): string {
   return value.toLocaleString("hu-HU") + " Ft";
@@ -34,12 +35,14 @@ function periodLabel(months: number): string {
 
 export function RoiCalculator() {
   const [rawInput, setRawInput] = useState("15 000");
+  const [employees, setEmployees] = useState(1);
 
   const monthlyFee = parseInput(rawInput);
+  const monthlyCost = employees >= 10 ? MONTHLY_COST_LARGE : MONTHLY_COST_DEFAULT;
 
   const { data, breakEvenMonth, savingsMilestones, isCheaper } =
     useMemo(() => {
-      const diff = monthlyFee - MONTHLY_COST;
+      const diff = monthlyFee - monthlyCost;
       const breakEven = diff > 0 ? Math.ceil(SETUP_COST / diff) : null;
 
       // Dynamic chart range: 12 months before break-even to 12 months after
@@ -51,14 +54,14 @@ export function RoiCalculator() {
         points.push({
           month: m,
           "Jelenlegi rendszer": monthlyFee * m,
-          IdőpontFoglalóm: SETUP_COST + MONTHLY_COST * m,
+          IdőpontFoglalóm: SETUP_COST + monthlyCost * m,
         });
       }
 
       // Find year milestones where savings are positive (after break-even)
       const milestones: { label: string; savings: number }[] = [];
       for (const months of [12, 24, 36, 48, 60, 72, 84, 96]) {
-        const savings = monthlyFee * months - (SETUP_COST + MONTHLY_COST * months);
+        const savings = monthlyFee * months - (SETUP_COST + monthlyCost * months);
         if (savings > 0) {
           const years = months / 12;
           milestones.push({ label: `a ${years}. évben`, savings });
@@ -70,9 +73,9 @@ export function RoiCalculator() {
         data: points,
         breakEvenMonth: breakEven,
         savingsMilestones: milestones,
-        isCheaper: monthlyFee > 0 && monthlyFee <= MONTHLY_COST,
+        isCheaper: monthlyFee > 0 && monthlyFee <= monthlyCost,
       };
-    }, [monthlyFee]);
+    }, [monthlyFee, monthlyCost]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const digits = e.target.value.replace(/[^\d]/g, "");
@@ -94,26 +97,49 @@ export function RoiCalculator() {
           Írd be, mennyit fizetsz havonta a jelenlegi időpontfoglaló rendszeredért.
         </p>
 
-        <div className="mx-auto mt-8 max-w-sm">
-          <label
-            htmlFor="monthly-fee"
-            className="block text-sm font-medium text-muted-foreground"
-          >
-            Jelenlegi havi díj (Ft)
-          </label>
-          <div className="relative mt-1">
+        <div className="mx-auto mt-8 grid max-w-sm gap-4 sm:max-w-xl sm:grid-cols-2">
+          <div>
+            <label
+              htmlFor="monthly-fee"
+              className="block text-sm font-medium text-muted-foreground"
+            >
+              Jelenlegi havi díj (Ft)
+            </label>
+            <div className="relative mt-1">
+              <input
+                id="monthly-fee"
+                type="text"
+                inputMode="numeric"
+                value={rawInput}
+                onChange={handleChange}
+                placeholder="pl. 15 000"
+                className="w-full rounded-lg border border-border bg-background px-4 py-3 text-lg font-semibold shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none"
+              />
+              <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-sm text-muted-foreground">
+                Ft/hó
+              </span>
+            </div>
+          </div>
+          <div>
+            <label
+              htmlFor="employees"
+              className="block text-sm font-medium text-muted-foreground"
+            >
+              Alkalmazottak száma
+            </label>
             <input
-              id="monthly-fee"
-              type="text"
-              inputMode="numeric"
-              value={rawInput}
-              onChange={handleChange}
-              placeholder="pl. 15 000"
-              className="w-full rounded-lg border border-border bg-background px-4 py-3 text-lg font-semibold shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none"
+              id="employees"
+              type="number"
+              min={1}
+              value={employees}
+              onChange={(e) => setEmployees(Math.max(1, Number(e.target.value)))}
+              className="mt-1 w-full rounded-lg border border-border bg-background px-4 py-3 text-lg font-semibold shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none"
             />
-            <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-sm text-muted-foreground">
-              Ft/hó
-            </span>
+            {employees >= 10 && (
+              <p className="mt-1 text-xs text-muted-foreground">
+                10+ alkalmazott: 10 000 Ft/hó
+              </p>
+            )}
           </div>
         </div>
 
@@ -137,7 +163,7 @@ export function RoiCalculator() {
           </div>
         )}
 
-        {monthlyFee > MONTHLY_COST && (
+        {monthlyFee > monthlyCost && (
           <>
             <div className="mt-10 h-80 w-full sm:h-96">
               <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={0}>
@@ -244,7 +270,7 @@ export function RoiCalculator() {
                   className="mt-1 font-heading text-2xl font-bold"
                   style={{ color: "#15803d" }}
                 >
-                  {formatHuf((monthlyFee - MONTHLY_COST) * 12)}
+                  {formatHuf((monthlyFee - monthlyCost) * 12)}
                 </p>
               </div>
             </div>

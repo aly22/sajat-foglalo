@@ -63,6 +63,9 @@ export function Pricing() {
               <p className="mt-4 text-sm text-muted-foreground">
                 Szerver, domain fenntartás, email küldés
               </p>
+              <p className="mt-2 text-xs text-muted-foreground">
+                10+ alkalmazott esetén 10 000 Ft/hó
+              </p>
             </div>
           </div>
 
