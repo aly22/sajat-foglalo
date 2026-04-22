@@ -40,7 +40,8 @@ export default function Home() {
         saját márkáddal. Egyszeri beüzemelési- és fix havi díjat fizetsz, nincs
         platformfüggés, és bármikor leállíthatod. A rendszerben van online
         foglalás, automatikus emlékeztetők, ügyfél CRM, statisztikák, várólista
-        és értékelési rendszer.
+        és értékelési rendszer. Alternatíva olyan szolgáltatásokkal szemben,
+        mint a Salonic, BWNET vagy Fresha.
       </p>
     </>
   );
