@@ -5,7 +5,7 @@ export const faqs = [
   },
   {
     q: "Miben tér el az általad készített rendszer más szolgáltatóktól?",
-    a: "A saját domaineden fut, nem vagy platformhoz kötve. Egyszeri beüzemelési- és fix havi díj, nem pedig havi előfizetés ami évről évre nő.",
+    a: "A saját domaineden fut, nem vagy platformhoz kötve. Egyszeri beüzemelési- és kiszámítható havi díj, amelyet évente legfeljebb 10%-kal emelhetek, amiről 30 nappal előtte szólok.",
   },
   {
     q: "Mi az a saját domain?",
@@ -49,7 +49,7 @@ export const softwareJsonLd = {
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   description:
-    "Online időpontfoglaló rendszer fodrászoknak, szalonoknak és edzőknek. Egyszeri beüzemelési- és fix havi díj, teljes kontroll.",
+    "Online időpontfoglaló rendszer fodrászoknak, szalonoknak és edzőknek. Egyszeri beüzemelési- és kiszámítható havi díj, teljes kontroll.",
   url: "https://idopontfoglalom.hu",
   offers: {
     "@type": "Offer",
@@ -69,7 +69,7 @@ export const localBusinessJsonLd = {
   "@type": "ProfessionalService",
   name: "IdőpontFoglalóm",
   description:
-    "Online időpontfoglaló rendszer szalonoknak. Saját domain, saját rendszer, fix havi díj.",
+    "Online időpontfoglaló rendszer szalonoknak. Saját domain, saját rendszer, kiszámítható havi díj.",
   url: "https://idopontfoglalom.hu",
   email: "alidahud@gmail.com",
   telephone: "+36307421723",

@@ -4,7 +4,7 @@ import { breadcrumbJsonLd } from "@/config/seo";
 
 export const metadata: Metadata = {
   title: "Rólam",
-  description: "Dahud Ali, az IdőpontFoglalóm fejlesztője. Saját időpontfoglaló rendszer szalonoknak, fix havi díjjal.",
+  description: "Dahud Ali, az IdőpontFoglalóm fejlesztője. Saját időpontfoglaló rendszer szalonoknak, kiszámítható havi díjjal.",
   openGraph: {
     url: "https://idopontfoglalom.hu/rolam",
     type: "website",

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | IdőpontFoglalóm",
   },
   description:
-    "Online időpontfoglaló rendszer fodrászoknak, szalonoknak és edzőknek. A tiéd. Egyszeri beüzemelési- és fix havi díj, teljes kontroll.",
+    "Online időpontfoglaló rendszer fodrászoknak, szalonoknak és edzőknek. A tiéd. Egyszeri beüzemelési- és kiszámítható havi díj, teljes kontroll.",
   authors: [{ name: "Dahud Ali" }],
   creator: "Dahud Ali",
   robots: {
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "IdőpontFoglalóm | Online időpontfoglaló rendszer szalonoknak",
     description:
-      "A saját online időpontfoglalód. Egyszeri beüzemelési- és fix havi díj, teljes kontroll.",
+      "A saját online időpontfoglalód. Egyszeri beüzemelési- és kiszámítható havi díj, teljes kontroll.",
     url: "https://idopontfoglalom.hu",
     siteName: "IdőpontFoglalóm",
     locale: "hu_HU",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "IdőpontFoglalóm | Online időpontfoglaló rendszer szalonoknak",
     description:
-      "A saját online időpontfoglalód. Egyszeri beüzemelési- és fix havi díj, teljes kontroll.",
+      "A saját online időpontfoglalód. Egyszeri beüzemelési- és kiszámítható havi díj, teljes kontroll.",
   },
   alternates: {
     canonical: "https://idopontfoglalom.hu",

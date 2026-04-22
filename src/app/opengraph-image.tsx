@@ -72,7 +72,7 @@ export default function Image() {
             marginTop: "16px",
           }}
         >
-          A tiéd. Egyszeri beüzemelési- és fix havi díj, teljes kontroll.
+          A tiéd. Egyszeri beüzemelési- és kiszámítható havi díj, teljes kontroll.
         </p>
       </div>
     ),
