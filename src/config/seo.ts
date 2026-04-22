@@ -4,7 +4,7 @@ export const faqs = [
     a: "Igen, 50–100 000 Ft előleget kérek a beüzemelés megkezdése előtt. Az összeget te határozod meg. Ha 30 napon belül jelzed, hogy nem vagy elégedett a rendszereddel, visszakapod az előleget.",
   },
   {
-    q: "Miben más az általad készített rendszer más szolgáltatóktól?",
+    q: "Miben tér el az általad készített rendszer más szolgáltatóktól?",
     a: "A saját domaineden fut, nem vagy platformhoz kötve. Egyszeri beüzemelési- és fix havi díj, nem pedig havi előfizetés ami évről évre nő.",
   },
   {
