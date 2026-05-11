@@ -53,7 +53,7 @@ export default function AboutPage() {
               bonyolított le rajta.
             </p>
             <p>
-              Aztán a barátom, Sterczer Tamás megkért, hogy készítsek egy
+              Aztán a barátom, Tamás megkért, hogy készítsek egy
               foglalórendszert a szalonjának menedzseléséhez. Így született az
               ötlet: egy rendszert készítek neked, ami a tiéd, és nem vagy
               platformhoz kötve.
